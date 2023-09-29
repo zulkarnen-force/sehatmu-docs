@@ -1,0 +1,165 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  /* Additional CSS rules for font styles, sizes, etc. */
+}
+.navbar__logo img {
+  height: 170%;
+  margin-top: -10px;
+}
+
+.alert {
+  position: relative;
+  top: 10;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  line-height: 1.8;
+  border-radius: 5px;
+  cursor: hand;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.alertCheckbox {
+  display: none;
+}
+
+:checked + .alert {
+  display: none;
+}
+
+.alertText {
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+}
+
+.alertClose {
+  float: right;
+  padding-top: 5px;
+  font-size: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+.info {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  color: #999;
+}
+
+.success {
+  background-color: #efe;
+  border: 1px solid #ded;
+  color: #9a9;
+}
+
+.notice {
+  background-color: #eff;
+  border: 1px solid #dee;
+  color: #9aa;
+}
+
+.success {
+  background-color: #ebfee6;
+  border: 1px solid #dee;
+  color: #090909;
+}
+
+.warning {
+  background-color: #fdf7df;
+  border: 1px solid #feec6f;
+  color: #c9971c;
+}
+
+.error {
+  background-color: #fee;
+  border: 1px solid #edd;
+  color: #a66;
+}
+
+/* Sidebar Method labels */
+.api-method > .menu__link {
+  align-items: center;
+  justify-content: start;
+}
+
+.api-method > .menu__link::before {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  margin-right: var(--ifm-spacing-horizontal);
+  text-align: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  color: white;
+}
+
+.get > .menu__link::before {
+  content: "get";
+  background-color: var(--ifm-color-primary);
+}
+
+.put > .menu__link::before {
+  content: "put";
+  background-color: var(--openapi-code-blue);
+}
+
+.post > .menu__link::before {
+  content: "post";
+  background-color: var(--openapi-code-green);
+}
+
+.delete > .menu__link::before {
+  content: "del";
+  background-color: var(--openapi-code-red);
+}
+
+.patch > .menu__link::before {
+  content: "patch";
+  background-color: var(--openapi-code-orange);
+}

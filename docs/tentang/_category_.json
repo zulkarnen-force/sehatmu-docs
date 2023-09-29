@@ -1,0 +1,8 @@
+{
+  "label": "Tentang",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Tentang SehatMu"
+  }
+}
