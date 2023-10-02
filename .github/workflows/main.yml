@@ -1,0 +1,31 @@
+name: CI/CD for CodeIgniter and Website Deployment
+
+on:
+  push:
+    branches:
+      - main # Change this to your default branch name
+
+jobs:
+  codeigniter-deploy:
+    name: 🚀 Deploy CodeIgniter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies and build
+        run: |
+          # composer install
+
+      - name: Deploykan
+        uses: appleboy/ssh-action@master
+        with:
+          debug: true
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            ls -l
+            bash /app/sehatmu-developer/deploy.sh

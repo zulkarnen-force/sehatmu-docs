@@ -9,7 +9,7 @@ const config = {
   title: "SehatMu",
   tagline: "SehatMu, untuk kesehatan Muhammadiyah",
   url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/sehatmu",
+  baseUrl: "/sehatmu/developer",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/sehat-mu.png",
