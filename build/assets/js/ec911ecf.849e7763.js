@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_template_openapi_docs=self.webpackChunkdocusaurus_template_openapi_docs||[]).push([[1946],{98911:e=>{e.exports=JSON.parse('{"permalink":"/sehatmu/developer/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
