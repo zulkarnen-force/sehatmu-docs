@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "SehatMu",
   tagline: "SehatMu, untuk kesehatan Muhammadiyah",
-  url: "https://your-docusaurus-test-site.com",
+  url: "http://103.19.182.20",
   baseUrl: "/sehatmu/developer",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -56,9 +56,9 @@ const config = {
         },
       },
       navbar: {
-        title: "SehatMu",
+        title: "",
         logo: {
-          alt: "My Site Logo",
+          alt: "SehatMu Logo",
           src: "img/sehat-mu.png",
         },
         items: [
@@ -75,8 +75,8 @@ const config = {
             to: "/docs/sandbox",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            href: "http://git.muhammadiyah.or.id/",
+            label: "GitLab",
             position: "right",
           },
         ],
@@ -84,38 +84,38 @@ const config = {
       footer: {
         style: "dark",
         links: [
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
+          // {
+          //   title: "Community",
+          //   items: [
+          // {
+          //   label: "Stack Overflow",
+          //   href: "https://stackoverflow.com/questions/tagged/docusaurus",
+          // },
+          // {
+          //   label: "Discord",
+          //   href: "https://discordapp.com/invite/docusaurus",
+          // },
+          // {
+          //   label: "Twitter",
+          //   href: "https://twitter.com/docusaurus",
+          // },
+          //   ],
+          // },
+          // {
+          //   title: "More",
+          //   items: [
+          // {
+          //   label: "Blog",
+          //   to: "/blog",
+          // },
+          // {
+          //   label: "GitLab",
+          //   href: "http://git.muhammadiyah.or.id",
+          // },
+          //   ],
+          // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} LabMu, SehatMu.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -132,7 +132,7 @@ const config = {
         docsPluginId: "classic",
         config: {
           onehealth: {
-            specPath: "examples/openapi.json",
+            specPath: "examples/labmu.json",
             outputDir: "docs/sandbox",
             sidebarOptions: {
               groupPathsBy: "tag",
