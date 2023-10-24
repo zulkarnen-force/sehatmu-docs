@@ -132,7 +132,7 @@ const config = {
         docsPluginId: "classic",
         config: {
           onehealth: {
-            specPath: "examples/labmu-23102023-001.json",
+            specPath: "examples/onehealth.json",
             outputDir: "docs/sandbox",
             sidebarOptions: {
               groupPathsBy: "tag",

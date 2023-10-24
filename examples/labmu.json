@@ -3,7 +3,7 @@ info:
   title: LabMu
   version: 1.0.0
 servers:
-  - url: http://103.19.182.20/api-sehatmu/
+  - url: http://103.19.182.20/api-sehatmu/test
 components:
   securitySchemes:
     bearerAuth:
