@@ -1,0 +1,17 @@
+Resources:
+- Organization
+- Condition
+- Observation - TTV
+- Composition
+- Procedure
+- Medication
+- MedicationRequest
+- MedicationDispense
+- DiagnosticReport
+- Patient
+- AllergyIntolerance
+- ClinicalImpression
+- HealthcareService
+- Encounter
+- Location
+Practitioner
