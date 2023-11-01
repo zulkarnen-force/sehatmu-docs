@@ -115,7 +115,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}  <a href="https://muhammadiyah.or.id" target="_blank">Persyarikatan Muhammadiyah</a>`,
+        copyright: `© ${new Date().getFullYear()}  <a href="https://muhammadiyah.or.id" target="_blank">Persyarikatan Muhammadiyah</a>`,
       },
       prism: {
         theme: lightCodeTheme,
