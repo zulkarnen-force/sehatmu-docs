@@ -60,6 +60,7 @@ const config = {
         logo: {
           alt: "SehatMu Logo",
           src: "img/sehat-mu.png",
+          href: "http://103.19.182.20/sehatmu/",
         },
         items: [
           {
