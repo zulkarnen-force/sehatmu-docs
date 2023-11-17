@@ -36,8 +36,8 @@ body {
   /* Additional CSS rules for font styles, sizes, etc. */
 }
 .navbar__logo img {
-  height: 170%;
-  margin-top: -10px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .alert {
