@@ -133,7 +133,8 @@ const config = {
         docsPluginId: "classic",
         config: {
           onehealth: {
-            specPath: "examples/onehealth.openapi-27102023001.json",
+            // specPath: "examples/onehealth.openapi-27102023001.json",
+            specPath: "examples/openapi/sehatmu.openapi.yaml",
             outputDir: "docs/sandbox",
             sidebarOptions: {
               groupPathsBy: "tag",
