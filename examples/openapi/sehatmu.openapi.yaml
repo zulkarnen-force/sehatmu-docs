@@ -753,6 +753,11 @@ paths:
           schema:
             type: string
           example: '1945-11-17'
+        - name: gender
+          in: query
+          schema:
+            type: string
+          example: male
       responses:
         '200':
           description: OK
