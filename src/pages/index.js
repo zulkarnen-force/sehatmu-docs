@@ -29,7 +29,7 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  return <Redirect to="/sehatmu/developer/docs/selamat-datang" />;
+  return <Redirect to="/" />;
 
   return (
     <Layout
