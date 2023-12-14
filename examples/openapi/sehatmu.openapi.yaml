@@ -1,9 +1,9 @@
 openapi: 3.0.0
 info:
-  title: SehatMu
+  title: SehatMu Docs
   version: 1.0.0
 servers:
-  - url: http://103.19.182.20/api/sehatmu/
+  - url: https://istanbul.muhammadiyah.or.id/
     description: Sandbox environment server
 components:
   securitySchemes:
@@ -11,6 +11,8 @@ components:
       type: http
       scheme: bearer
 tags:
+  - name: OAuth
+    description: Security to access SehatMu API.
   - name: Resource
   - name: Resource > Organization
   - name: Resource > Practitioner
@@ -29,6 +31,137 @@ tags:
   - name: Resource > HealthcareService
   - name: Resource > Encounter
 paths:
+  /oauth/token:
+    post:
+      tags:
+        - OAuth
+      summary: Authorize
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                client_id:
+                  type: string
+                  example: 0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client
+                client_secret:
+                  type: string
+                  example: >-
+                    906959aa4211487066072588249854ac1ca54e06a54940bc35b3311fc594ed2a
+                grant_type:
+                  type: string
+                  example: client_credentials
+      responses:
+        '200':
+          description: OK
+          headers:
+            Server:
+              schema:
+                type: string
+                example: nginx/1.18.0 (Ubuntu)
+            Date:
+              schema:
+                type: string
+                example: Thu, 14 Dec 2023 05:06:41 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '404'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            ETag:
+              schema:
+                type: string
+                example: W/"194-Q52Y4kOGsHnmRMMaXyaQdheYcC0"
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                _id: f7519af4-9848-46b8-8904-29e70679a2d3
+                accessToken: dc8420573572ba81a4b54fff1735c83c10352af2
+                accessTokenExpiresAt: '2023-12-15T05:06:41.401Z'
+                clientId: 0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client
+                client:
+                  name: John Doe
+                  email: john.doe@example.com
+                userId: 64eb3286e34e01fa5887d9b6
+                user:
+                  id: 64eb3286e34e01fa5887d9b6
+                  email: john.doe@example.com
+                  name: John Doe
+  /oauth/me:
+    get:
+      tags:
+        - OAuth
+      summary: Who I Am
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Server:
+              schema:
+                type: string
+                example: nginx/1.18.0 (Ubuntu)
+            Date:
+              schema:
+                type: string
+                example: Thu, 14 Dec 2023 05:06:54 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '287'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            ETag:
+              schema:
+                type: string
+                example: W/"11f-tmj56MXVDnVhHn/H5l4SMKDggp0"
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  accessToken: dc8420573572ba81a4b54fff1735c83c10352af2
+                  accessTokenExpiresAt: '2023-12-15T05:06:41.401Z'
+                  client:
+                    id: 0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client
+                  user:
+                    id: 64eb3286e34e01fa5887d9b6
+                userId: 64eb3286e34e01fa5887d9b6
+                sessionType: oauth2
   /Organization:
     post:
       tags:
@@ -486,7 +619,7 @@ paths:
           schema:
             type: string
           required: true
-          example: 64f18316833aa7ea04233e55
+          example: 655b0866ff1bbe7ae30a3d7f
       responses:
         '200':
           description: OK
@@ -758,6 +891,11 @@ paths:
           schema:
             type: string
           example: male
+        - name: identifier
+          in: query
+          schema:
+            type: string
+          example: https://fhir.kemkes.go.id/id/nik|367400001111201
       responses:
         '200':
           description: OK
@@ -2524,7 +2662,7 @@ paths:
                 identifier:
                   - use: official
                     system: https://fhir.kemkes.go.id/id/nik-ibu
-                    value: 360328xxxxxxx
+                    value: '360328000'
                 active: true
                 name:
                   - use: official

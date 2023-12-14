@@ -1,0 +1,34 @@
+---
+id: authorize
+title: "Authorize"
+description: "Authorize"
+sidebar_label: "Authorize"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["OAuth"],"requestBody":{"content":{"application/x-www-form-urlencoded":{"schema":{"type":"object","properties":{"client_id":{"type":"string","example":"0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client"},"client_secret":{"type":"string","example":"906959aa4211487066072588249854ac1ca54e06a54940bc35b3311fc594ed2a"},"grant_type":{"type":"string","example":"client_credentials"}}}}}},"responses":{"200":{"description":"OK","headers":{"Server":{"schema":{"type":"string","example":"nginx/1.18.0 (Ubuntu)"}},"Date":{"schema":{"type":"string","example":"Thu, 14 Dec 2023 05:06:41 GMT"}},"Content-Type":{"schema":{"type":"string","example":"application/json; charset=utf-8"}},"Content-Length":{"schema":{"type":"integer","example":"404"}},"Connection":{"schema":{"type":"string","example":"keep-alive"}},"X-Powered-By":{"schema":{"type":"string","example":"Express"}},"Access-Control-Allow-Origin":{"schema":{"type":"string","example":"*"}},"ETag":{"schema":{"type":"string","example":"W/\"194-Q52Y4kOGsHnmRMMaXyaQdheYcC0\""}}},"content":{"application/json":{"schema":{"type":"object"},"example":{"_id":"f7519af4-9848-46b8-8904-29e70679a2d3","accessToken":"dc8420573572ba81a4b54fff1735c83c10352af2","accessTokenExpiresAt":"2023-12-15T05:06:41.401Z","clientId":"0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client","client":{"name":"John Doe","email":"john.doe@example.com"},"userId":"64eb3286e34e01fa5887d9b6","user":{"id":"64eb3286e34e01fa5887d9b6","email":"john.doe@example.com","name":"John Doe"}}}}}},"description":"Authorize","method":"post","path":"/oauth/token","servers":[{"url":"https://istanbul.muhammadiyah.or.id/","description":"Sandbox environment server"}],"securitySchemes":{"bearerAuth":{"type":"http","scheme":"bearer"}},"info":{"title":"SehatMu Docs","version":"1.0.0"},"postman":{"name":"Authorize","description":{"type":"text/plain"},"url":{"path":["oauth","token"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Content-Type","value":"application/x-www-form-urlencoded"},{"key":"Accept","value":"application/json"}],"method":"POST","body":{"mode":"urlencoded","urlencoded":[]}}}
+sidebar_class_name: "post api-method"
+info_path: docs/sandbox/sehatmu-docs
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Authorize
+
+
+
+Authorize
+
+<MimeTabs><TabItem label={"application/x-www-form-urlencoded"} value={"application/x-www-form-urlencoded-schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Request Body</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"client_id"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client"}}></SchemaItem><SchemaItem collapsible={false} name={"client_secret"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"906959aa4211487066072588249854ac1ca54e06a54940bc35b3311fc594ed2a"}}></SchemaItem><SchemaItem collapsible={false} name={"grant_type"} required={false} schemaName={"string"} qualifierMessage={undefined} schema={{"type":"string","example":"client_credentials"}}></SchemaItem></ul></details></TabItem></MimeTabs><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><details style={{"textAlign":"left","marginBottom":"1rem"}} data-collaposed={true} open={false}><summary style={{}}><strong>Response Headers</strong></summary><ul style={{"marginLeft":"1rem"}}><li className={"schemaItem"}><summary style={{}}><strong>Server</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Date</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Content-Type</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Content-Length</strong><span style={{"opacity":"0.6"}}> integer</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Connection</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>X-Powered-By</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Access-Control-Allow-Origin</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>ETag</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li></ul></details><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><li><div><strong>object</strong></div></li></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{}"} language={"json"}></ResponseSamples></TabItem><TabItem label={"Example"} value={"Example"}><ResponseSamples responseExample={"{\n  \"_id\": \"f7519af4-9848-46b8-8904-29e70679a2d3\",\n  \"accessToken\": \"dc8420573572ba81a4b54fff1735c83c10352af2\",\n  \"accessTokenExpiresAt\": \"2023-12-15T05:06:41.401Z\",\n  \"clientId\": \"0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client\",\n  \"client\": {\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\"\n  },\n  \"userId\": \"64eb3286e34e01fa5887d9b6\",\n  \"user\": {\n    \"id\": \"64eb3286e34e01fa5887d9b6\",\n    \"email\": \"john.doe@example.com\",\n    \"name\": \"John Doe\"\n  }\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

@@ -1,0 +1,34 @@
+---
+id: who-i-am
+title: "Who I Am"
+description: "Who I Am"
+sidebar_label: "Who I Am"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["OAuth"],"security":[{"bearerAuth":[]}],"responses":{"200":{"description":"OK","headers":{"Server":{"schema":{"type":"string","example":"nginx/1.18.0 (Ubuntu)"}},"Date":{"schema":{"type":"string","example":"Thu, 14 Dec 2023 05:06:54 GMT"}},"Content-Type":{"schema":{"type":"string","example":"application/json; charset=utf-8"}},"Content-Length":{"schema":{"type":"integer","example":"287"}},"Connection":{"schema":{"type":"string","example":"keep-alive"}},"X-Powered-By":{"schema":{"type":"string","example":"Express"}},"Access-Control-Allow-Origin":{"schema":{"type":"string","example":"*"}},"ETag":{"schema":{"type":"string","example":"W/\"11f-tmj56MXVDnVhHn/H5l4SMKDggp0\""}}},"content":{"application/json":{"schema":{"type":"object"},"example":{"data":{"accessToken":"dc8420573572ba81a4b54fff1735c83c10352af2","accessTokenExpiresAt":"2023-12-15T05:06:41.401Z","client":{"id":"0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client"},"user":{"id":"64eb3286e34e01fa5887d9b6"}},"userId":"64eb3286e34e01fa5887d9b6","sessionType":"oauth2"}}}}},"description":"Who I Am","method":"get","path":"/oauth/me","servers":[{"url":"https://istanbul.muhammadiyah.or.id/","description":"Sandbox environment server"}],"securitySchemes":{"bearerAuth":{"type":"http","scheme":"bearer"}},"info":{"title":"SehatMu Docs","version":"1.0.0"},"postman":{"name":"Who I Am","description":{"type":"text/plain"},"url":{"path":["oauth","me"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET","auth":{"type":"bearer","bearer":[{"type":"any","value":"<Bearer Token>","key":"token"}]}}}
+sidebar_class_name: "get api-method"
+info_path: docs/sandbox/sehatmu-docs
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Who I Am
+
+
+
+Who I Am
+
+<div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><details style={{"textAlign":"left","marginBottom":"1rem"}} data-collaposed={true} open={false}><summary style={{}}><strong>Response Headers</strong></summary><ul style={{"marginLeft":"1rem"}}><li className={"schemaItem"}><summary style={{}}><strong>Server</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Date</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Content-Type</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Content-Length</strong><span style={{"opacity":"0.6"}}> integer</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Connection</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>X-Powered-By</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>Access-Control-Allow-Origin</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li><li className={"schemaItem"}><summary style={{}}><strong>ETag</strong><span style={{"opacity":"0.6"}}> string</span></summary><div></div></li></ul></details><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><li><div><strong>object</strong></div></li></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{}"} language={"json"}></ResponseSamples></TabItem><TabItem label={"Example"} value={"Example"}><ResponseSamples responseExample={"{\n  \"data\": {\n    \"accessToken\": \"dc8420573572ba81a4b54fff1735c83c10352af2\",\n    \"accessTokenExpiresAt\": \"2023-12-15T05:06:41.401Z\",\n    \"client\": {\n      \"id\": \"0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client\"\n    },\n    \"user\": {\n      \"id\": \"64eb3286e34e01fa5887d9b6\"\n    }\n  },\n  \"userId\": \"64eb3286e34e01fa5887d9b6\",\n  \"sessionType\": \"oauth2\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      
