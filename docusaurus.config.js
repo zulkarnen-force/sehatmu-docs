@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "SehatMu",
   tagline: "SehatMu, untuk kesehatan Muhammadiyah",
-  url: "http://103.19.182.20",
-  baseUrl: "/sehatmu/developer",
+  url: "https://jerusalem.muhammadiyah.or.id",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/sehat-mu.png",
@@ -76,7 +76,7 @@ const config = {
             to: "/docs/sandbox",
           },
           {
-            href: "http://git.muhammadiyah.or.id/",
+            href: "https://git.muhammadiyah.or.id/",
             label: "GitLab",
             position: "right",
           },
