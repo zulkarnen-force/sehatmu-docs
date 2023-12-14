@@ -60,7 +60,7 @@ const config = {
         logo: {
           alt: "SehatMu Logo",
           src: "img/sehatmu2.png",
-          href: "http://103.19.182.20/sehatmu/",
+          href: "https://glasgow.muhammadiyah.or.id",
         },
         items: [
           {
