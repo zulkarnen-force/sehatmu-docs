@@ -13,7 +13,7 @@ Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pad
 #### URL
 
 ```url
-https://sehat.muhammadiyah.or.id/api/oauth/token
+https://istanbul.muhammadiyah.or.id/oauth/token
 ```
 
 #### HTTP Verb/Method
@@ -171,7 +171,7 @@ Gateway Timeout
 --data-urlencode "client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF" ^
 --data-urlencode "client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD" ^
 --request POST ^
-"https://sehat.muhammadiyah.or.id/api/oauth/token"
+"https://istanbul.muhammadiyah.or.id/oauth/token"
 ```
 
 #### cURL (Linux)
@@ -183,7 +183,7 @@ Gateway Timeout
  --data-urlencode 'client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF' \
  --data-urlencode 'client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD' \
  --request POST \
- 'https://sehat.muhammadiyah.or.id/api/oauth/token'
+ 'https://istanbul.muhammadiyah.or.id/oauth/token'
 ```
 
 #### Postman
@@ -193,7 +193,7 @@ Gateway Timeout
 2. Masukkan request URL:
 
 ```
-https://sehat.muhammadiyah.or.id/api/oauth/token
+https://istanbul.muhammadiyah.or.id/oauth/token
 ```
 
 3. Lalu pilih request method `POST`.
