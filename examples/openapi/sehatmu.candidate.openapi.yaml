@@ -8,8 +8,8 @@ servers:
 tags:
   - name: Resource
   - name: Resource > Composition
-  - name: Resource > Condition
   - name: Resource > Observation - TTV
+  - name: Resource > Condition
   - name: Resource > Procedure
   - name: Resource > MedicationRequest
   - name: Resource > MedicationDispense
@@ -2056,598 +2056,6 @@ paths:
                     - code: 18842-5
                       display: Discharge summary
                       system: http://loinc.org
-  /Condition:
-    post:
-      tags:
-        - Resource > Condition
-      summary: Condition - Meninggalkan Faskes
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                resourceType: Condition
-                clinicalStatus:
-                  coding:
-                    - system: http://terminology.hl7.org/CodeSystem/condition-clinical
-                      code: active
-                      display: Active
-                category:
-                  - coding:
-                      - system: >-
-                          http://terminology.hl7.org/CodeSystem/condition-category
-                        code: encounter-diagnosis
-                        display: Encounter Diagnosis
-                code:
-                  coding:
-                    - system: http://snomed.info/sct
-                      code: '359746009'
-                      display: Patient's condition stable
-                subject:
-                  reference: Patient/100000030009
-                  display: Budi Santoso
-                encounter:
-                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
-                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-      responses:
-        '201':
-          description: Created
-          headers:
-            last-modified:
-              schema:
-                type: string
-                example: Mon, 03 Oct 2022 00:37:55 UTC
-            content-type:
-              schema:
-                type: string
-                example: application/fhir+json;charset=utf-8
-            etag:
-              schema:
-                type: string
-                example: W/"MTY2NDc1NzQ3NTQxMjc0NjAwMA"
-            location:
-              schema:
-                type: string
-                example: >-
-                  https://healthcare.googleapis.com/v1/projects/dto-ihs-dev/locations/asia-southeast2/datasets/dev/fhirStores/fhir-v4-dev/fhir/Condition/151538f3-c891-4873-b7a5-1a775799851b/_history/MTY2NDc1NzQ3NTQxMjc0NjAwMA
-            vary:
-              schema:
-                type: string
-                example: Referer
-            date:
-              schema:
-                type: string
-                example: Mon, 03 Oct 2022 00:37:55 GMT
-            content-length:
-              schema:
-                type: integer
-                example: '1078'
-            x-xss-protection:
-              schema:
-                type: integer
-                example: '0'
-            x-frame-options:
-              schema:
-                type: string
-                example: SAMEORIGIN
-            x-content-type-options:
-              schema:
-                type: string
-                example: nosniff
-            x-request-id:
-              schema:
-                type: string
-                example: 31b7ed3a-16d8-4565-a00a-a2da46bac129
-            Via:
-              schema:
-                type: string
-                example: 1.1 google
-            Alt-Svc:
-              schema:
-                type: string
-                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                category:
-                  - coding:
-                      - code: encounter-diagnosis
-                        display: Encounter Diagnosis
-                        system: >-
-                          http://terminology.hl7.org/CodeSystem/condition-category
-                clinicalStatus:
-                  coding:
-                    - code: active
-                      display: Active
-                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
-                code:
-                  coding:
-                    - code: '359746009'
-                      display: Patient's condition stable
-                      system: http://snomed.info/sct
-                encounter:
-                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
-                id: 151538f3-c891-4873-b7a5-1a775799851b
-                meta:
-                  lastUpdated: '2022-10-03T00:37:55.412746+00:00'
-                  versionId: MTY2NDc1NzQ3NTQxMjc0NjAwMA
-                resourceType: Condition
-                subject:
-                  display: Budi Santoso
-                  reference: Patient/100000030009
-    get:
-      tags:
-        - Resource > Condition
-      summary: Condition - Search by Encounter
-      parameters:
-        - name: encounter
-          in: query
-          schema:
-            type: string
-          example: 1a0951f7-c99e-4b54-9207-29709483895d
-      responses:
-        '200':
-          description: OK
-          headers:
-            content-type:
-              schema:
-                type: string
-                example: application/fhir+json;charset=utf-8
-            vary:
-              schema:
-                type: string
-                example: Referer
-            date:
-              schema:
-                type: string
-                example: Tue, 09 Aug 2022 02:55:17 GMT
-            content-length:
-              schema:
-                type: integer
-                example: '3168'
-            x-xss-protection:
-              schema:
-                type: integer
-                example: '0'
-            x-frame-options:
-              schema:
-                type: string
-                example: SAMEORIGIN
-            x-content-type-options:
-              schema:
-                type: string
-                example: nosniff
-            x-request-id:
-              schema:
-                type: string
-                example: cb4f93fd-d9b4-9fae-b3d5-b79458de039b
-            Via:
-              schema:
-                type: string
-                example: 1.1 google
-            Alt-Svc:
-              schema:
-                type: string
-                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                entry:
-                  - fullUrl: >-
-                      https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Condition/cfbfb2a9-b261-494b-a6ad-905875fcdec6
-                    resource:
-                      category:
-                        - coding:
-                            - code: encounter-diagnosis
-                              display: Encounter Diagnosis
-                              system: >-
-                                http://terminology.hl7.org/CodeSystem/condition-category
-                      clinicalStatus:
-                        coding:
-                          - code: active
-                            display: Active
-                            system: >-
-                              http://terminology.hl7.org/CodeSystem/condition-clinical
-                      code:
-                        coding:
-                          - code: K35.8
-                            display: Acute appendicitis, other and unspecified
-                            system: http://hl7.org/fhir/sid/icd-10
-                      encounter:
-                        display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-                        reference: Encounter/abc329d0-1692-4772-9340-e75df4b29eda
-                      id: cfbfb2a9-b261-494b-a6ad-905875fcdec6
-                      meta:
-                        lastUpdated: '2022-08-02T05:01:32.386871+00:00'
-                        versionId: MTY1OTQxNjQ5MjM4Njg3MTAwMA
-                      resourceType: Condition
-                      subject:
-                        display: Budi Santoso
-                        reference: Patient/100000030009
-                    search:
-                      mode: match
-                  - fullUrl: >-
-                      https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Condition/eebc5f97-0e7b-488f-835e-b8c654aa46af
-                    resource:
-                      category:
-                        - coding:
-                            - code: encounter-diagnosis
-                              display: Encounter Diagnosis
-                              system: >-
-                                http://terminology.hl7.org/CodeSystem/condition-category
-                      clinicalStatus:
-                        coding:
-                          - code: active
-                            display: Active
-                            system: >-
-                              http://terminology.hl7.org/CodeSystem/condition-clinical
-                      code:
-                        coding:
-                          - code: A91
-                            display: Dengue haemorrhagic fever
-                            system: http://hl7.org/fhir/sid/icd-10
-                      encounter:
-                        display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-                        reference: Encounter/abc329d0-1692-4772-9340-e75df4b29eda
-                      id: eebc5f97-0e7b-488f-835e-b8c654aa46af
-                      meta:
-                        lastUpdated: '2022-08-02T05:01:32.386871+00:00'
-                        versionId: MTY1OTQxNjQ5MjM4Njg3MTAwMA
-                      resourceType: Condition
-                      subject:
-                        display: Budi Santoso
-                        reference: Patient/100000030009
-                    search:
-                      mode: match
-                resourceType: Bundle
-                total: 2
-                type: searchset
-  /Condition/{id}:
-    get:
-      tags:
-        - Resource > Condition
-      summary: Condition - By ID
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-          example: 65377f47308e6088934d71b7
-      responses:
-        '200':
-          description: OK
-          headers:
-            etag:
-              schema:
-                type: string
-                example: W/"MTY1OTQxNjQ5MjM4Njg3MTAwMA"
-            last-modified:
-              schema:
-                type: string
-                example: Tue, 02 Aug 2022 05:01:32 UTC
-            content-type:
-              schema:
-                type: string
-                example: application/fhir+json;charset=utf-8
-            vary:
-              schema:
-                type: string
-                example: Referer
-            date:
-              schema:
-                type: string
-                example: Tue, 09 Aug 2022 02:39:54 GMT
-            content-length:
-              schema:
-                type: integer
-                example: '1083'
-            x-xss-protection:
-              schema:
-                type: integer
-                example: '0'
-            x-frame-options:
-              schema:
-                type: string
-                example: SAMEORIGIN
-            x-content-type-options:
-              schema:
-                type: string
-                example: nosniff
-            x-request-id:
-              schema:
-                type: string
-                example: b234ff16-5739-4c47-9c59-2eda26061bbd
-            Via:
-              schema:
-                type: string
-                example: 1.1 google
-            Alt-Svc:
-              schema:
-                type: string
-                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                category:
-                  - coding:
-                      - code: encounter-diagnosis
-                        display: Encounter Diagnosis
-                        system: >-
-                          http://terminology.hl7.org/CodeSystem/condition-category
-                clinicalStatus:
-                  coding:
-                    - code: active
-                      display: Active
-                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
-                code:
-                  coding:
-                    - code: K35.8
-                      display: Acute appendicitis, other and unspecified
-                      system: http://hl7.org/fhir/sid/icd-10
-                encounter:
-                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-                  reference: Encounter/abc329d0-1692-4772-9340-e75df4b29eda
-                id: cfbfb2a9-b261-494b-a6ad-905875fcdec6
-                meta:
-                  lastUpdated: '2022-08-02T05:01:32.386871+00:00'
-                  versionId: MTY1OTQxNjQ5MjM4Njg3MTAwMA
-                resourceType: Condition
-                subject:
-                  display: Budi Santoso
-                  reference: Patient/100000030009
-    put:
-      tags:
-        - Resource > Condition
-      summary: Condition - Update
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                resourceType: Condition
-                id: f1369adf-26f6-47a5-90f2-ce08442639aa
-                clinicalStatus:
-                  coding:
-                    - system: http://terminology.hl7.org/CodeSystem/condition-clinical
-                      code: remission
-                      display: Remission
-                category:
-                  - coding:
-                      - system: >-
-                          http://terminology.hl7.org/CodeSystem/condition-category
-                        code: encounter-diagnosis
-                        display: Encounter Diagnosis
-                code:
-                  coding:
-                    - system: http://hl7.org/fhir/sid/icd-10
-                      code: K35.8
-                      display: Acute appendicitis, other and unspecified
-                subject:
-                  reference: Patient/100000030009
-                  display: Budi Santoso
-                encounter:
-                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
-                  display: Kunjungan Budi Santoso di hari Selasa, 17 Juni 2022
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-          example: asdasdasd
-      responses:
-        '200':
-          description: OK
-          headers:
-            location:
-              schema:
-                type: string
-                example: >-
-                  https://healthcare.googleapis.com/v1/projects/dto-ihs-dev/locations/asia-southeast2/datasets/dev/fhirStores/fhir-v4-dev/fhir/Condition/f1369adf-26f6-47a5-90f2-ce08442639aa/_history/MTY2NDc2ODI4Mzg3NDM4OTAwMA
-            last-modified:
-              schema:
-                type: string
-                example: Mon, 03 Oct 2022 03:38:03 UTC
-            etag:
-              schema:
-                type: string
-                example: W/"MTY2NDc2ODI4Mzg3NDM4OTAwMA"
-            content-type:
-              schema:
-                type: string
-                example: application/fhir+json;charset=utf-8
-            vary:
-              schema:
-                type: string
-                example: Referer
-            date:
-              schema:
-                type: string
-                example: Mon, 03 Oct 2022 03:38:03 GMT
-            content-length:
-              schema:
-                type: integer
-                example: '1089'
-            x-xss-protection:
-              schema:
-                type: integer
-                example: '0'
-            x-frame-options:
-              schema:
-                type: string
-                example: SAMEORIGIN
-            x-content-type-options:
-              schema:
-                type: string
-                example: nosniff
-            x-request-id:
-              schema:
-                type: string
-                example: a455e8e9-f835-463b-9620-c31570f5a708
-            Via:
-              schema:
-                type: string
-                example: 1.1 google
-            Alt-Svc:
-              schema:
-                type: string
-                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                category:
-                  - coding:
-                      - code: encounter-diagnosis
-                        display: Encounter Diagnosis
-                        system: >-
-                          http://terminology.hl7.org/CodeSystem/condition-category
-                clinicalStatus:
-                  coding:
-                    - code: remission
-                      display: Remission
-                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
-                code:
-                  coding:
-                    - code: K35.8
-                      display: Acute appendicitis, other and unspecified
-                      system: http://hl7.org/fhir/sid/icd-10
-                encounter:
-                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
-                id: f1369adf-26f6-47a5-90f2-ce08442639aa
-                meta:
-                  lastUpdated: '2022-10-03T03:38:03.874389+00:00'
-                  versionId: MTY2NDc2ODI4Mzg3NDM4OTAwMA
-                resourceType: Condition
-                subject:
-                  display: Budi Santoso
-                  reference: Patient/100000030009
-    patch:
-      tags:
-        - Resource > Condition
-      summary: Condition - Patch
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                - op: replace
-                  path: /clinicalStatus/coding/0/code
-                  value: remission
-      parameters:
-        - name: Content-Type
-          in: header
-          schema:
-            type: string
-          example: application/json-patch+json
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-          example: 64ec483e752a5a4d2eca42ba
-      responses:
-        '200':
-          description: OK
-          headers:
-            etag:
-              schema:
-                type: string
-                example: W/"MTY2NTEyNzIwOTA2ODU0NDAwMA"
-            location:
-              schema:
-                type: string
-                example: >-
-                  https://healthcare.googleapis.com/v1/projects/dto-ihs-dev/locations/asia-southeast2/datasets/dev/fhirStores/fhir-v4-dev/fhir/Condition/f1369adf-26f6-47a5-90f2-ce08442639aa/_history/MTY2NTEyNzIwOTA2ODU0NDAwMA
-            content-type:
-              schema:
-                type: string
-                example: application/fhir+json;charset=utf-8
-            last-modified:
-              schema:
-                type: string
-                example: Fri, 07 Oct 2022 07:20:09 UTC
-            vary:
-              schema:
-                type: string
-                example: Referer
-            date:
-              schema:
-                type: string
-                example: Fri, 07 Oct 2022 07:20:09 GMT
-            content-length:
-              schema:
-                type: integer
-                example: '1089'
-            x-xss-protection:
-              schema:
-                type: integer
-                example: '0'
-            x-frame-options:
-              schema:
-                type: string
-                example: SAMEORIGIN
-            x-content-type-options:
-              schema:
-                type: string
-                example: nosniff
-            x-request-id:
-              schema:
-                type: string
-                example: 77230244-f7b8-48cd-92ae-18dfb1e742fe
-            Via:
-              schema:
-                type: string
-                example: 1.1 google
-            Alt-Svc:
-              schema:
-                type: string
-                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                category:
-                  - coding:
-                      - code: encounter-diagnosis
-                        display: Encounter Diagnosis
-                        system: >-
-                          http://terminology.hl7.org/CodeSystem/condition-category
-                clinicalStatus:
-                  coding:
-                    - code: remission
-                      display: Remission
-                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
-                code:
-                  coding:
-                    - code: K35.8
-                      display: Acute appendicitis, other and unspecified
-                      system: http://hl7.org/fhir/sid/icd-10
-                encounter:
-                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
-                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
-                id: f1369adf-26f6-47a5-90f2-ce08442639aa
-                meta:
-                  lastUpdated: '2022-10-07T07:20:09.068544+00:00'
-                  versionId: MTY2NTEyNzIwOTA2ODU0NDAwMA
-                resourceType: Condition
-                subject:
-                  display: Budi Santoso
-                  reference: Patient/100000030009
   /Observation:
     post:
       tags:
@@ -3556,6 +2964,598 @@ paths:
                   system: http://unitsofmeasure.org
                   unit: breaths/minute
                   value: 15
+  /Condition:
+    post:
+      tags:
+        - Resource > Condition
+      summary: Condition - Meninggalkan Faskes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                resourceType: Condition
+                clinicalStatus:
+                  coding:
+                    - system: http://terminology.hl7.org/CodeSystem/condition-clinical
+                      code: active
+                      display: Active
+                category:
+                  - coding:
+                      - system: >-
+                          http://terminology.hl7.org/CodeSystem/condition-category
+                        code: encounter-diagnosis
+                        display: Encounter Diagnosis
+                code:
+                  coding:
+                    - system: http://snomed.info/sct
+                      code: '359746009'
+                      display: Patient's condition stable
+                subject:
+                  reference: Patient/100000030009
+                  display: Budi Santoso
+                encounter:
+                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
+                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+      responses:
+        '201':
+          description: Created
+          headers:
+            last-modified:
+              schema:
+                type: string
+                example: Mon, 03 Oct 2022 00:37:55 UTC
+            content-type:
+              schema:
+                type: string
+                example: application/fhir+json;charset=utf-8
+            etag:
+              schema:
+                type: string
+                example: W/"MTY2NDc1NzQ3NTQxMjc0NjAwMA"
+            location:
+              schema:
+                type: string
+                example: >-
+                  https://healthcare.googleapis.com/v1/projects/dto-ihs-dev/locations/asia-southeast2/datasets/dev/fhirStores/fhir-v4-dev/fhir/Condition/151538f3-c891-4873-b7a5-1a775799851b/_history/MTY2NDc1NzQ3NTQxMjc0NjAwMA
+            vary:
+              schema:
+                type: string
+                example: Referer
+            date:
+              schema:
+                type: string
+                example: Mon, 03 Oct 2022 00:37:55 GMT
+            content-length:
+              schema:
+                type: integer
+                example: '1078'
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-request-id:
+              schema:
+                type: string
+                example: 31b7ed3a-16d8-4565-a00a-a2da46bac129
+            Via:
+              schema:
+                type: string
+                example: 1.1 google
+            Alt-Svc:
+              schema:
+                type: string
+                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                category:
+                  - coding:
+                      - code: encounter-diagnosis
+                        display: Encounter Diagnosis
+                        system: >-
+                          http://terminology.hl7.org/CodeSystem/condition-category
+                clinicalStatus:
+                  coding:
+                    - code: active
+                      display: Active
+                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
+                code:
+                  coding:
+                    - code: '359746009'
+                      display: Patient's condition stable
+                      system: http://snomed.info/sct
+                encounter:
+                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
+                id: 151538f3-c891-4873-b7a5-1a775799851b
+                meta:
+                  lastUpdated: '2022-10-03T00:37:55.412746+00:00'
+                  versionId: MTY2NDc1NzQ3NTQxMjc0NjAwMA
+                resourceType: Condition
+                subject:
+                  display: Budi Santoso
+                  reference: Patient/100000030009
+    get:
+      tags:
+        - Resource > Condition
+      summary: Condition - Search by Encounter
+      parameters:
+        - name: encounter
+          in: query
+          schema:
+            type: string
+          example: 1a0951f7-c99e-4b54-9207-29709483895d
+      responses:
+        '200':
+          description: OK
+          headers:
+            content-type:
+              schema:
+                type: string
+                example: application/fhir+json;charset=utf-8
+            vary:
+              schema:
+                type: string
+                example: Referer
+            date:
+              schema:
+                type: string
+                example: Tue, 09 Aug 2022 02:55:17 GMT
+            content-length:
+              schema:
+                type: integer
+                example: '3168'
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-request-id:
+              schema:
+                type: string
+                example: cb4f93fd-d9b4-9fae-b3d5-b79458de039b
+            Via:
+              schema:
+                type: string
+                example: 1.1 google
+            Alt-Svc:
+              schema:
+                type: string
+                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                entry:
+                  - fullUrl: >-
+                      https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Condition/cfbfb2a9-b261-494b-a6ad-905875fcdec6
+                    resource:
+                      category:
+                        - coding:
+                            - code: encounter-diagnosis
+                              display: Encounter Diagnosis
+                              system: >-
+                                http://terminology.hl7.org/CodeSystem/condition-category
+                      clinicalStatus:
+                        coding:
+                          - code: active
+                            display: Active
+                            system: >-
+                              http://terminology.hl7.org/CodeSystem/condition-clinical
+                      code:
+                        coding:
+                          - code: K35.8
+                            display: Acute appendicitis, other and unspecified
+                            system: http://hl7.org/fhir/sid/icd-10
+                      encounter:
+                        display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+                        reference: Encounter/abc329d0-1692-4772-9340-e75df4b29eda
+                      id: cfbfb2a9-b261-494b-a6ad-905875fcdec6
+                      meta:
+                        lastUpdated: '2022-08-02T05:01:32.386871+00:00'
+                        versionId: MTY1OTQxNjQ5MjM4Njg3MTAwMA
+                      resourceType: Condition
+                      subject:
+                        display: Budi Santoso
+                        reference: Patient/100000030009
+                    search:
+                      mode: match
+                  - fullUrl: >-
+                      https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Condition/eebc5f97-0e7b-488f-835e-b8c654aa46af
+                    resource:
+                      category:
+                        - coding:
+                            - code: encounter-diagnosis
+                              display: Encounter Diagnosis
+                              system: >-
+                                http://terminology.hl7.org/CodeSystem/condition-category
+                      clinicalStatus:
+                        coding:
+                          - code: active
+                            display: Active
+                            system: >-
+                              http://terminology.hl7.org/CodeSystem/condition-clinical
+                      code:
+                        coding:
+                          - code: A91
+                            display: Dengue haemorrhagic fever
+                            system: http://hl7.org/fhir/sid/icd-10
+                      encounter:
+                        display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+                        reference: Encounter/abc329d0-1692-4772-9340-e75df4b29eda
+                      id: eebc5f97-0e7b-488f-835e-b8c654aa46af
+                      meta:
+                        lastUpdated: '2022-08-02T05:01:32.386871+00:00'
+                        versionId: MTY1OTQxNjQ5MjM4Njg3MTAwMA
+                      resourceType: Condition
+                      subject:
+                        display: Budi Santoso
+                        reference: Patient/100000030009
+                    search:
+                      mode: match
+                resourceType: Bundle
+                total: 2
+                type: searchset
+  /Condition/{id}:
+    get:
+      tags:
+        - Resource > Condition
+      summary: Condition - By ID
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: 65377f47308e6088934d71b7
+      responses:
+        '200':
+          description: OK
+          headers:
+            etag:
+              schema:
+                type: string
+                example: W/"MTY1OTQxNjQ5MjM4Njg3MTAwMA"
+            last-modified:
+              schema:
+                type: string
+                example: Tue, 02 Aug 2022 05:01:32 UTC
+            content-type:
+              schema:
+                type: string
+                example: application/fhir+json;charset=utf-8
+            vary:
+              schema:
+                type: string
+                example: Referer
+            date:
+              schema:
+                type: string
+                example: Tue, 09 Aug 2022 02:39:54 GMT
+            content-length:
+              schema:
+                type: integer
+                example: '1083'
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-request-id:
+              schema:
+                type: string
+                example: b234ff16-5739-4c47-9c59-2eda26061bbd
+            Via:
+              schema:
+                type: string
+                example: 1.1 google
+            Alt-Svc:
+              schema:
+                type: string
+                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                category:
+                  - coding:
+                      - code: encounter-diagnosis
+                        display: Encounter Diagnosis
+                        system: >-
+                          http://terminology.hl7.org/CodeSystem/condition-category
+                clinicalStatus:
+                  coding:
+                    - code: active
+                      display: Active
+                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
+                code:
+                  coding:
+                    - code: K35.8
+                      display: Acute appendicitis, other and unspecified
+                      system: http://hl7.org/fhir/sid/icd-10
+                encounter:
+                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+                  reference: Encounter/abc329d0-1692-4772-9340-e75df4b29eda
+                id: cfbfb2a9-b261-494b-a6ad-905875fcdec6
+                meta:
+                  lastUpdated: '2022-08-02T05:01:32.386871+00:00'
+                  versionId: MTY1OTQxNjQ5MjM4Njg3MTAwMA
+                resourceType: Condition
+                subject:
+                  display: Budi Santoso
+                  reference: Patient/100000030009
+    put:
+      tags:
+        - Resource > Condition
+      summary: Condition - Update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                resourceType: Condition
+                id: f1369adf-26f6-47a5-90f2-ce08442639aa
+                clinicalStatus:
+                  coding:
+                    - system: http://terminology.hl7.org/CodeSystem/condition-clinical
+                      code: remission
+                      display: Remission
+                category:
+                  - coding:
+                      - system: >-
+                          http://terminology.hl7.org/CodeSystem/condition-category
+                        code: encounter-diagnosis
+                        display: Encounter Diagnosis
+                code:
+                  coding:
+                    - system: http://hl7.org/fhir/sid/icd-10
+                      code: K35.8
+                      display: Acute appendicitis, other and unspecified
+                subject:
+                  reference: Patient/100000030009
+                  display: Budi Santoso
+                encounter:
+                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
+                  display: Kunjungan Budi Santoso di hari Selasa, 17 Juni 2022
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: asdasdasd
+      responses:
+        '200':
+          description: OK
+          headers:
+            location:
+              schema:
+                type: string
+                example: >-
+                  https://healthcare.googleapis.com/v1/projects/dto-ihs-dev/locations/asia-southeast2/datasets/dev/fhirStores/fhir-v4-dev/fhir/Condition/f1369adf-26f6-47a5-90f2-ce08442639aa/_history/MTY2NDc2ODI4Mzg3NDM4OTAwMA
+            last-modified:
+              schema:
+                type: string
+                example: Mon, 03 Oct 2022 03:38:03 UTC
+            etag:
+              schema:
+                type: string
+                example: W/"MTY2NDc2ODI4Mzg3NDM4OTAwMA"
+            content-type:
+              schema:
+                type: string
+                example: application/fhir+json;charset=utf-8
+            vary:
+              schema:
+                type: string
+                example: Referer
+            date:
+              schema:
+                type: string
+                example: Mon, 03 Oct 2022 03:38:03 GMT
+            content-length:
+              schema:
+                type: integer
+                example: '1089'
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-request-id:
+              schema:
+                type: string
+                example: a455e8e9-f835-463b-9620-c31570f5a708
+            Via:
+              schema:
+                type: string
+                example: 1.1 google
+            Alt-Svc:
+              schema:
+                type: string
+                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                category:
+                  - coding:
+                      - code: encounter-diagnosis
+                        display: Encounter Diagnosis
+                        system: >-
+                          http://terminology.hl7.org/CodeSystem/condition-category
+                clinicalStatus:
+                  coding:
+                    - code: remission
+                      display: Remission
+                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
+                code:
+                  coding:
+                    - code: K35.8
+                      display: Acute appendicitis, other and unspecified
+                      system: http://hl7.org/fhir/sid/icd-10
+                encounter:
+                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
+                id: f1369adf-26f6-47a5-90f2-ce08442639aa
+                meta:
+                  lastUpdated: '2022-10-03T03:38:03.874389+00:00'
+                  versionId: MTY2NDc2ODI4Mzg3NDM4OTAwMA
+                resourceType: Condition
+                subject:
+                  display: Budi Santoso
+                  reference: Patient/100000030009
+    patch:
+      tags:
+        - Resource > Condition
+      summary: Condition - Patch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                - op: replace
+                  path: /clinicalStatus/coding/0/code
+                  value: remission
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json-patch+json
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: 64ec483e752a5a4d2eca42ba
+      responses:
+        '200':
+          description: OK
+          headers:
+            etag:
+              schema:
+                type: string
+                example: W/"MTY2NTEyNzIwOTA2ODU0NDAwMA"
+            location:
+              schema:
+                type: string
+                example: >-
+                  https://healthcare.googleapis.com/v1/projects/dto-ihs-dev/locations/asia-southeast2/datasets/dev/fhirStores/fhir-v4-dev/fhir/Condition/f1369adf-26f6-47a5-90f2-ce08442639aa/_history/MTY2NTEyNzIwOTA2ODU0NDAwMA
+            content-type:
+              schema:
+                type: string
+                example: application/fhir+json;charset=utf-8
+            last-modified:
+              schema:
+                type: string
+                example: Fri, 07 Oct 2022 07:20:09 UTC
+            vary:
+              schema:
+                type: string
+                example: Referer
+            date:
+              schema:
+                type: string
+                example: Fri, 07 Oct 2022 07:20:09 GMT
+            content-length:
+              schema:
+                type: integer
+                example: '1089'
+            x-xss-protection:
+              schema:
+                type: integer
+                example: '0'
+            x-frame-options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            x-content-type-options:
+              schema:
+                type: string
+                example: nosniff
+            x-request-id:
+              schema:
+                type: string
+                example: 77230244-f7b8-48cd-92ae-18dfb1e742fe
+            Via:
+              schema:
+                type: string
+                example: 1.1 google
+            Alt-Svc:
+              schema:
+                type: string
+                example: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                category:
+                  - coding:
+                      - code: encounter-diagnosis
+                        display: Encounter Diagnosis
+                        system: >-
+                          http://terminology.hl7.org/CodeSystem/condition-category
+                clinicalStatus:
+                  coding:
+                    - code: remission
+                      display: Remission
+                      system: http://terminology.hl7.org/CodeSystem/condition-clinical
+                code:
+                  coding:
+                    - code: K35.8
+                      display: Acute appendicitis, other and unspecified
+                      system: http://hl7.org/fhir/sid/icd-10
+                encounter:
+                  display: Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022
+                  reference: Encounter/1a0951f7-c99e-4b54-9207-29709483895d
+                id: f1369adf-26f6-47a5-90f2-ce08442639aa
+                meta:
+                  lastUpdated: '2022-10-07T07:20:09.068544+00:00'
+                  versionId: MTY2NTEyNzIwOTA2ODU0NDAwMA
+                resourceType: Condition
+                subject:
+                  display: Budi Santoso
+                  reference: Patient/100000030009
   /Procedure:
     post:
       tags:

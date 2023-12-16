@@ -1,0 +1,1 @@
+scp --dry-run -P 1000 ./build/ vm006@103.19.182.25:/app/html/sehatmu-docs/
