@@ -80,7 +80,7 @@ Tabel 2. Persyaratan data minimum orang terkait:
 
 ## 2. Alur Pembuatan Data
 
-Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-langkah berikut:
+Untuk membuat data pasien bayi baru lahir di SehatMu, silahkan ikut langkah-langkah berikut:
 
 ### Tabel 1. Alur pembuatan data (NIK Ibu)
 
@@ -92,8 +92,8 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
       <td><strong>Approach</strong></td>
     </tr>
     <tr>
-      <td>Langkah 1: <strong>GET</strong> informasi Ibu pasien dari SATUSEHAT
-        (<em>Untuk memastikan data Pasien Ibu sudah ada di SATUSEHAT</em>)
+      <td>Langkah 1: <strong>GET</strong> informasi Ibu pasien dari SehatMu
+        (<em>Untuk memastikan data Pasien Ibu sudah ada di SehatMu</em>)
       </td>
       <td>
         <ul>
@@ -179,7 +179,7 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
             </ul>
           </li>
           <li><em>Return</em> <code>Nomor IHS</code> ke APIGee</li>
-          <li><strong>POST</strong> Data Pasien ke FHIR SATUSEHAT dari MPI</li>
+          <li><strong>POST</strong> Data Pasien ke FHIR SehatMu dari MPI</li>
           <li>Lanjutkan ke langkah 2.b untuk membuat <em>resources</em> <code>RelatedPerson</code></li>
         </ul>
       </td>
@@ -200,7 +200,7 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
               <li><code>Nomor Telepon Ibu</code></li>
             </ul>
           </li>
-          <li><code>POST</code> <code>RelatedPerson</code> <em>resource record</em> ke FHIR SATUSEHAT dari MPI API <em>service</em>
+          <li><code>POST</code> <code>RelatedPerson</code> <em>resource record</em> ke FHIR SehatMu dari MPI API <em>service</em>
             <ul>
               <li><em>Generate</em> <code>RelatedPerson</code> ID</li>
             </ul>
@@ -224,8 +224,8 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
       <td><strong>Approach</strong></td>
     </tr>
     <tr>
-      <td>Option 1: Gunakan <code>Nomor IHS</code> Pasien ke SATUSEHAT.
-        (Use Patient IHS Number to SATUSEHAT)
+      <td>Option 1: Gunakan <code>Nomor IHS</code> Pasien ke SehatMu.
+        (Use Patient IHS Number to SehatMu)
       </td>
       <td>
         <ul>
@@ -239,7 +239,7 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
       </td>
     </tr>
     <tr>
-      <td>Option 2a: Gunakan NIK Pasien sebagai parameter <code>Identifier</code> untuk SATUSEHAT.</td>
+      <td>Option 2a: Gunakan NIK Pasien sebagai parameter <code>Identifier</code> untuk SehatMu.</td>
       <td>
         <ul>
           <li>Memeriksa NIK</li>
@@ -252,7 +252,7 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
       </td>
     </tr>
     <tr>
-      <td>Option 2b: Gunakan NIK Pasien sebagai parameter <code>Identifier</code> untuk SATUSEHAT.</td>
+      <td>Option 2b: Gunakan NIK Pasien sebagai parameter <code>Identifier</code> untuk SehatMu.</td>
       <td>
         <ul>
           <li>Memeriksa NIK, Nama, dan Tanggal Lahir Pasien.</li>
@@ -314,7 +314,7 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
 </table>
 
 <h2>4. Update/Merge Data</h2>
-<p>Fasyankes dapat melakukan pemutakhiran data pasien baru dengan NIK di SATUSEHAT, jika kondisi ini terpenuhi:</p>
+<p>Fasyankes dapat melakukan pemutakhiran data pasien baru dengan NIK di SehatMu, jika kondisi ini terpenuhi:</p>
 <ul>
   <li>Data pasien baru lahir <strong>WAJIB</strong> tidak divalidasi oleh DUKCAPIL</li>
 </ul>
@@ -345,7 +345,7 @@ Untuk membuat data pasien bayi baru lahir di SATUSEHAT, silahkan ikut langkah-la
           <li>Fasyankes dapat memperbarui data dengan menggunakan <strong>PUT</strong> <em>Resource Patient</em> ke Apigee.</li>
           <li>Data dikirimkan ke MPI API.</li>
           <li>Data Pasien sudah diperbarui.</li>
-          <li>MPI <strong>PUT</strong> data pasien baru ke FHIR SATUSEHAT.
+          <li>MPI <strong>PUT</strong> data pasien baru ke FHIR SehatMu.
             <ul>
               <li>Jika terdapat Nomor NIK, tindak lanjut validasi oleh pasien itu sendiri dan ke DUKCAPIL.</li>
             </ul>

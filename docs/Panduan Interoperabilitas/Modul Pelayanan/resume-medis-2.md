@@ -1,6 +1,6 @@
 # Resume Medis - Rawat Jalan Jilid 2
 
-Panduan SATUSEHAT Use Case Resume Medis Rawat Jalan terdiri dari 2 jilid yaitu:
+Panduan SehatMu Use Case Resume Medis Rawat Jalan terdiri dari 2 jilid yaitu:
 
 1. Jilid 1: Alur interoperabilitas secara umum untuk resume medis rawat jalan
 
@@ -8,9 +8,9 @@ Panduan SATUSEHAT Use Case Resume Medis Rawat Jalan terdiri dari 2 jilid yaitu:
 
 Tahapan alur interoperabilitas dan resource yang digunakan untuk Resume Medis Rawat Jalan dapat dilihat pada gambar di bawah ini.
 
-![Alur Integrasi Resume Medis Rawat Jalan](https://satusehat.kemkes.go.id/platform/docs/id/interoperability/_images/diagram-rawjal.png)
+![Alur Integrasi Resume Medis Rawat Jalan](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/_images/diagram-rawjal.png)
 
-Alur integrasi dan format pengiriman data terkait pemeriksaan penunjang akan dijelaskan pada Buku Panduan SATUSEHAT Resume Medis Rawat Jalan Jilid 2. Adapun langkah yang akan dijelaskan pada Buku Panduan SATUSEHAT Resume Medis Rawat Jalan Jilid 2 yaitu:
+Alur integrasi dan format pengiriman data terkait pemeriksaan penunjang akan dijelaskan pada Buku Panduan SehatMu Resume Medis Rawat Jalan Jilid 2. Adapun langkah yang akan dijelaskan pada Buku Panduan SehatMu Resume Medis Rawat Jalan Jilid 2 yaitu:
 
 1. Permintaan Pemeriksaan Penunjang
 2. Spesimen
@@ -40,7 +40,7 @@ Data atau variabel resume medis rawat jalan yang dipertukarkan adalah:
 <tr>
 <td class="tableblock halign-left valign-middle" rowspan="3"></td>
 <td class="tableblock halign-left valign-middle" rowspan="3"><p class="tableblock"><strong>a</strong></p></td>
-<td class="tableblock halign-left valign-middle" rowspan="3"><p class="tableblock"><strong>Nomor SATUSEHAT Pasien</strong></p></td>
+<td class="tableblock halign-left valign-middle" rowspan="3"><p class="tableblock"><strong>Nomor SehatMu Pasien</strong></p></td>
 <td class="tableblock halign-left valign-middle" rowspan="3"><p class="tableblock"><strong><code>Patient</code></strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><code>Patient.identifier.use</code></strong></p></td>
 <td class="tableblock halign-left valign-middle" rowspan="19"></td>
@@ -634,9 +634,9 @@ Data atau variabel resume medis rawat jalan yang dipertukarkan adalah:
 
 ## Pendaftaran Pasien
 
-Apabila melakukan pengiriman data kesehatan melalui SATUSEHAT yang memiliki elemen data terkait pasien, maka diperlukan informasi {patient-ihs-number} dari pasien yang bersangkutan. {patient-ihs-number} seorang pasien didapatkan dari Master Patient Index (MPI) Kementerian Kesehatan. MPI menyimpan data-data demografi pasien berskala nasional, mulai dari nama, tanggal lahir, alamat, identitas resmi yang diterbitkan pemerintah, dan lain lain. Setelah mendapatkan {patient-ihs-number}, ID dapat disimpan secara di masing-masing sistem internal fasyankes maupun partner non-fasyankes. {patient-ihs-number} akan mempermudah pelaporan pelayanan kesehatan yang berhubungan dengan pasien, karena partner tidak diwajibkan menyertakan data diri setiap ada pengiriman data {patient-ihs-number} juga dapat digunakan untuk melihat data diri pasien secara menyeluruh.
+Apabila melakukan pengiriman data kesehatan melalui SehatMu yang memiliki elemen data terkait pasien, maka diperlukan informasi {patient-ihs-number} dari pasien yang bersangkutan. {patient-ihs-number} seorang pasien didapatkan dari Master Patient Index (MPI) Kementerian Kesehatan. MPI menyimpan data-data demografi pasien berskala nasional, mulai dari nama, tanggal lahir, alamat, identitas resmi yang diterbitkan pemerintah, dan lain lain. Setelah mendapatkan {patient-ihs-number}, ID dapat disimpan secara di masing-masing sistem internal fasyankes maupun partner non-fasyankes. {patient-ihs-number} akan mempermudah pelaporan pelayanan kesehatan yang berhubungan dengan pasien, karena partner tidak diwajibkan menyertakan data diri setiap ada pengiriman data {patient-ihs-number} juga dapat digunakan untuk melihat data diri pasien secara menyeluruh.
 
-Proses pencarian {patient-ihs-number} dari pasien dapat dilakukan melalui FHIR API dengan metode GET. Untuk metode pencarian data pasien di SATUSEHAT secara detail dapat dilihat dalam resource Patient dan terkait panduan/playbook MPI dapat dilihat dalam dokumen Master Patient Index.
+Proses pencarian {patient-ihs-number} dari pasien dapat dilakukan melalui FHIR API dengan metode GET. Untuk metode pencarian data pasien di SehatMu secara detail dapat dilihat dalam resource Patient dan terkait panduan/playbook MPI dapat dilihat dalam dokumen Master Patient Index.
 
 ## Pendaftaran Kunjungan Pasien
 
@@ -690,7 +690,7 @@ Penjelasan tipe mandatoris, deskripsi dan format pengisian dari setiap elemen da
      - 1 data hasil pemeriksaan (`Observation`)
      - 1 data laporan pemeriksaan (`DiagnosticReport`)
 
-![Gambar 2. Skema Pemeriksaan Penunjang Tunggal](https://satusehat.kemkes.go.id/platform/docs/id/interoperability/_images/penunjang-tunggal.png)
+![Gambar 2. Skema Pemeriksaan Penunjang Tunggal](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/_images/penunjang-tunggal.png)
 
 2. **Pemeriksaan Penunjang Panel/Paket**
    - Contoh kasus: Seorang dokter melakukan permintaan pemeriksaan panel elektrolit darah yang terdiri dari 3 parameter yaitu natrium, kalium, dan klorida darah. Maka, data yang perlu dikirimkan yaitu:
@@ -699,7 +699,7 @@ Penjelasan tipe mandatoris, deskripsi dan format pengisian dari setiap elemen da
      - 3 data hasil pemeriksaan (`Observation`) terdiri dari kode LOINC untuk natrium darah, kalium darah, klorida darah
      - 1 data laporan pemeriksaan (`DiagnosticReport`) dengan kode LOINC untuk panel elektrolit darah. 3 data hasil pemeriksaan (`Observation`) akan di referensi dalam data `DiagnosticReport`.
 
-![Gambar 2. Skema Pemeriksaan Penunjang Panel](https://satusehat.kemkes.go.id/platform/docs/id/interoperability/_images/penunjang-panel.png)
+![Gambar 2. Skema Pemeriksaan Penunjang Panel](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/_images/penunjang-panel.png)
 
 ## Pengiriman Data Permintaan Pemeriksaan Penunjang Laboratorium
 

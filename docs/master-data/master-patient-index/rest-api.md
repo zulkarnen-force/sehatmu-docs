@@ -18,14 +18,14 @@ Autentikasi menggunakan grant type client_credentials adalah proses autentikasi 
 
 ### Mendapatkan Token
 
-Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pada setiap request ReST API SATUSEHAT selanjutnya.
+Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pada setiap request ReST API SehatMu selanjutnya.
 
 <Alert type="error">Setiap terdapat simbol asterik <code>*</code> sebelum nama variabel atau parameter yang disebutkan, maka variabel atau parameter tersebut bersifat <strong>WAJIB</strong>, <strong>harus ada</strong>, atau <strong>pasti selalu ada</strong>, contoh: <code>*variabel</code> .</Alert>
 
 ### Request
 
 ```URL
-https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
+https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
 ```
 
 ### HTTP Verb/Method
@@ -122,18 +122,18 @@ Hasil response, dengan HTTP Status Code berpola 2xx atau 4xx, yang dikembalikan 
 
 ### 2xx Success
 
-Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari properti access_token, dimana tipe token (lihat properti token_type) tersebut adalah BearerToken. Nilai akses token tersebut WAJIB selalu digunakan sebagai nilai dari header Authorization: Bearer <access_token> saat melakukan request lainnya dari ReST API SATUSEHAT.
+Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari properti access_token, dimana tipe token (lihat properti token_type) tersebut adalah BearerToken. Nilai akses token tersebut WAJIB selalu digunakan sebagai nilai dari header Authorization: Bearer <access_token> saat melakukan request lainnya dari ReST API SehatMu.
 
 ### Contoh
 
 ```json
 {
   "refresh_token_expires_in": "0",
-  "api_product_list": "[api-satusehat-stg, api-dev, pl-api-satusehat-stg, pl-api-dev]",
+  "api_product_list": "[api-SehatMu-stg, api-dev, pl-api-SehatMu-stg, pl-api-dev]",
   "api_product_list_json": [
-    "api-satusehat-stg",
+    "api-SehatMu-stg",
     "api-dev",
-    "pl-api-satusehat-stg",
+    "pl-api-SehatMu-stg",
     "pl-api-dev"
   ],
   "organization_name": "ihs-prod-1",
@@ -191,7 +191,7 @@ Gateway Timeout
   --data-urlencode "client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF" ^
   --data-urlencode "client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD" ^
   --request POST ^
-  "https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials"
+  "https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials"
 ```
 
 ### cURL (Linux)
@@ -202,7 +202,7 @@ Gateway Timeout
   --data-urlencode 'client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF' \
   --data-urlencode 'client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD' \
   --request POST \
-  'https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials'
+  'https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials'
 ```
 
 ## Postman
@@ -212,7 +212,7 @@ Gateway Timeout
 2. Enter the request URL:
 
    ```
-   https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
+   https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
    ```
 
 3. Choose the request method `POST`.
@@ -241,14 +241,14 @@ Gateway Timeout
 
 ### Penambahan Data
 
-Fungsi dari ReST API ini adalah untuk melakukan penambahan data terkait resource Patient ke dalam Ekosistem SATUSEHAT.
+Fungsi dari ReST API ini adalah untuk melakukan penambahan data terkait resource Patient ke dalam Ekosistem SehatMu.
 
 ### Request
 
 ### URL
 
 ```
-https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient:
+https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient:
 ```
 
 ### HTTP Verb/Method
@@ -266,7 +266,7 @@ POST
 
 `Body (application/json), dengan identifier NIK Pasien`.
 
-Di bagian body ini payload JSON dari resource Patient sesuai standar FHIR dimasukkan. Terkait cara pengisian dari format FHIR tersebut di luar cakupan dari dokumentasi ini, silakan melihat pada dokumentasi terkait Petunjuk Teknis atau Playbook yang telah disediakan oleh tim SATUSEHAT dari Pusat Data dan Teknologi Informasi - Digital Transformation Office (DTO) Kementerian Kesehatan Republik Indonesia.
+Di bagian body ini payload JSON dari resource Patient sesuai standar FHIR dimasukkan. Terkait cara pengisian dari format FHIR tersebut di luar cakupan dari dokumentasi ini, silakan melihat pada dokumentasi terkait Petunjuk Teknis atau Playbook yang telah disediakan oleh tim SehatMu dari Pusat Data dan Teknologi Informasi - Digital Transformation Office (DTO) Kementerian Kesehatan Republik Indonesia.
 
 Bentuk umum dari payload untuk penambahan data sebagai berikut:
 
@@ -286,7 +286,7 @@ Bentuk umum dari payload untuk penambahan data sebagai berikut:
 ```
 
 `Body (application/json), dengan identifier NIK Ibu`
-Di bagian body ini payload JSON dari resource Patient dengan identifier NIK Ibu sesuai standar FHIR dimasukkan. Terkait cara pengisian dari format FHIR tersebut di luar cakupan dari dokumentasi ini, silakan melihat pada dokumentasi terkait Petunjuk Teknis atau Playbook yang telah disediakan oleh tim SATUSEHAT dari Pusat Data dan Teknologi Informasi - Digital Transformation Office (DTO) Kementerian Kesehatan Republik Indonesia.
+Di bagian body ini payload JSON dari resource Patient dengan identifier NIK Ibu sesuai standar FHIR dimasukkan. Terkait cara pengisian dari format FHIR tersebut di luar cakupan dari dokumentasi ini, silakan melihat pada dokumentasi terkait Petunjuk Teknis atau Playbook yang telah disediakan oleh tim SehatMu dari Pusat Data dan Teknologi Informasi - Digital Transformation Office (DTO) Kementerian Kesehatan Republik Indonesia.
 
 Bentuk umum dari payload untuk penambahan data sebagai berikut:
 
@@ -359,7 +359,7 @@ Gateway Timeout
     ...
   }" ^
   --request POST ^
-  "https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient"
+  "https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient"
 ```
 
 ### cURL (Linux)
@@ -373,7 +373,7 @@ Gateway Timeout
     ...
   }' \
   --request POST \
-  'https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient'
+  'https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient'
 ```
 
 ### Postman
@@ -383,7 +383,7 @@ Gateway Timeout
 2. Masukkan request URL:
 
    ```
-   https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient:
+   https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient:
    ```
 
 3. Pilih request method `POST`.
@@ -407,7 +407,7 @@ Gateway Timeout
 
 ## Pembaruan Sebagian Data
 
-Fungsi dari ReST API ini adalah untuk melakukan perubahan sebagian dari data terkait resource Patient ke dalam Ekosistem SATUSEHAT, yang sebelumnya sudah ditambahkan dan tersedia di dalam Ekosistem SATUSEHAT. Untuk melakukan perubahan sebagian (patching) data, PERLU ID dari resource Patient yang akan diubah dan juga nama/ID elemen dari Patient yang akan dilakukan perubahan.
+Fungsi dari ReST API ini adalah untuk melakukan perubahan sebagian dari data terkait resource Patient ke dalam Ekosistem SehatMu, yang sebelumnya sudah ditambahkan dan tersedia di dalam Ekosistem SehatMu. Untuk melakukan perubahan sebagian (patching) data, PERLU ID dari resource Patient yang akan diubah dan juga nama/ID elemen dari Patient yang akan dilakukan perubahan.
 
 > Setiap terdapat simbol asterik `*` sebelum nama variabel atau parameter yang disebutkan, maka variabel atau parameter tersebut bersifat WAJIB, harus ada, atau pasti selalu ada, contoh: `*variabel`.
 
@@ -416,7 +416,7 @@ Fungsi dari ReST API ini adalah untuk melakukan perubahan sebagian dari data ter
 ### URL
 
 ```http
-https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/:id
+https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/:id
 ```
 
 ### HTTP Verb/Method
@@ -439,7 +439,7 @@ PATCH
 | \*Content-Type  | string    | Mime type dari payload data yang akan dikirimkan di dalam body dalam format JSON, WAJIB diisi dengan `application/json`.                                                                                                    |
 
 Body (application/json)
-Di bagian body ini payload JSON dari resource Patient sesuai standar FHIR dimasukkan. Terkait cara pengisian dari format FHIR tersebut di luar cakupan dari dokumentasi ini, silakan melihat pada dokumentasi terkait Petunjuk Teknis atau Playbook yang telah disediakan oleh tim SATUSEHAT dari Pusat Data dan Teknologi Informasi - Digital Transformation Office (DTO) Kementerian Kesehatan Republik Indonesia.
+Di bagian body ini payload JSON dari resource Patient sesuai standar FHIR dimasukkan. Terkait cara pengisian dari format FHIR tersebut di luar cakupan dari dokumentasi ini, silakan melihat pada dokumentasi terkait Petunjuk Teknis atau Playbook yang telah disediakan oleh tim SehatMu dari Pusat Data dan Teknologi Informasi - Digital Transformation Office (DTO) Kementerian Kesehatan Republik Indonesia.
 
 Bentuk umum dari payload untuk patching sebagai berikut:
 
@@ -532,7 +532,7 @@ Gateway Timeout
       }
   ]" ^
   --request PATCH ^
-  "https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/100000000001"
+  "https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/100000000001"
 ```
 
 #### cURL (Linux)
@@ -549,7 +549,7 @@ Gateway Timeout
     }
   ]' \
   --request PATCH \
-  'https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/100000000001'
+  'https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/100000000001'
 ```
 
 #### Postman
@@ -559,7 +559,7 @@ Gateway Timeout
 2. Masukkan request URL:
 
    ```
-   https://api-satusehat-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/:id
+   https://api-SehatMu-dev.dto.kemkes.go.id/fhir-r4/v1/Patient/:id
    ```
 
 3. Pilih request method `PATCH`.

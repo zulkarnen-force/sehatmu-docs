@@ -10,4 +10,4 @@ Disamping adanya dokumentasi secara umum terkait Master Sarana Index (MSI), maka
 
 ## 2. Tujuan
 
-Dokumentasi ReST API Master Sarana Index (MSI) dibuat untuk kebutuhan ReST API yang tersedia dari Master Sarana Index (MSI) yang telah dikembangkan oleh tim developer SATUSEHAT. Penjelasan ReST API Master Sarana Index (MSI) didokumentasi ini hanya terbatas dari spesifikasi dari ReST API itu sendiri, penjelasan lengkap terkait Master Sarana Index (MSI), akan dijelaskan pada dokumentasi tersendiri.
+Dokumentasi ReST API Master Sarana Index (MSI) dibuat untuk kebutuhan ReST API yang tersedia dari Master Sarana Index (MSI) yang telah dikembangkan oleh tim developer SehatMu. Penjelasan ReST API Master Sarana Index (MSI) didokumentasi ini hanya terbatas dari spesifikasi dari ReST API itu sendiri, penjelasan lengkap terkait Master Sarana Index (MSI), akan dijelaskan pada dokumentasi tersendiri.

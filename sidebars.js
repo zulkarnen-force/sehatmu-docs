@@ -29,6 +29,19 @@ const sidebars = {
       // @ts-ignore
       items: require("./docs/sandbox/sidebar.js"),
     },
+    {
+      type: "category",
+      label: "SehatMu API On Going",
+      link: {
+        type: "generated-index",
+        title: "SehatMu API On Going",
+        description:
+          "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+        slug: "/sandbox/ongoing",
+      },
+      // @ts-ignore
+      items: require("./docs/sandbox/ongoing/sidebar.js"),
+    },
   ],
 
   // But you can create a sidebar manually

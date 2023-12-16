@@ -18,9 +18,9 @@ Karena kita tidak dapat menggantungkan layanan dari API Dukcapil tersebut, pada 
 
 Sentralisasi data yang berisikan informasi data personal layanan kesehatan ini kita namakan Master Patient Index (MPI) sehingga dapat dimanfaatkan oleh sistem yang terganggu akibat ketergantungan pada API Dukcapil tadi maupun pemangku kepentingan lainnya kedepan. Dalam MPI ini pencatatan data pasien akan menggunakan penomoran yang unik dan standardized dimana nantinya pemangku kepentingan lain dapat menggunakan MPI sebagai tools untuk mendapatkan IHS Number sebagai penomoran utama index pasien.
 
-Apabila melakukan pengiriman data kesehatan melalui SATUSEHAT yang memiliki elemen data terkait pasien, maka diperlukan informasi {patient-ihs-number} dari pasien yang bersangkutan. {patient-ihs-number} seorang pasien didapatkan dari Master Patient Index (MPI) Kementerian Kesehatan. MPI menyimpan data-data demografi pasien berskala nasional, mulai dari nama, tanggal lahir, alamat, Identitas resmi yang diterbitkan pemerintah, dan lain lain. Setelah mendapatkan {patient-ihs-number}, ID dapat disimpan secara di masing-masing sistem internal fasyankes maupun partner non-fasyankes. {patient-ihs-number} akan mempermudah pelaporan pelayanan kesehatan yang berhubungan dengan pasien, karena partner tidak diwajibkan menyertakan data diri setiap ada pengiriman data {patient-ihs-number} juga dapat digunakan untuk melihat data diri pasien secara menyeluruh.
+Apabila melakukan pengiriman data kesehatan melalui SehatMu yang memiliki elemen data terkait pasien, maka diperlukan informasi {patient-ihs-number} dari pasien yang bersangkutan. {patient-ihs-number} seorang pasien didapatkan dari Master Patient Index (MPI) Kementerian Kesehatan. MPI menyimpan data-data demografi pasien berskala nasional, mulai dari nama, tanggal lahir, alamat, Identitas resmi yang diterbitkan pemerintah, dan lain lain. Setelah mendapatkan {patient-ihs-number}, ID dapat disimpan secara di masing-masing sistem internal fasyankes maupun partner non-fasyankes. {patient-ihs-number} akan mempermudah pelaporan pelayanan kesehatan yang berhubungan dengan pasien, karena partner tidak diwajibkan menyertakan data diri setiap ada pengiriman data {patient-ihs-number} juga dapat digunakan untuk melihat data diri pasien secara menyeluruh.
 
-Master Patient Index (MPI) merupakan the single-source-of-truth (sumber utama) informasi pasien yang dapat diakses oleh fasyankes yang memiliki akses ke IHS. MPI dibagi menjadi beberapa case (kasus) yang nantinya akan dibahas lebih dalam pada Dokumentasi SATUSEHAT Master Patient Index (MPI) ini. Berikut ini case interoperabilitas MPI:
+Master Patient Index (MPI) merupakan the single-source-of-truth (sumber utama) informasi pasien yang dapat diakses oleh fasyankes yang memiliki akses ke IHS. MPI dibagi menjadi beberapa case (kasus) yang nantinya akan dibahas lebih dalam pada Dokumentasi SehatMu Master Patient Index (MPI) ini. Berikut ini case interoperabilitas MPI:
 
 Pasien dengan NIK.
 
@@ -34,9 +34,9 @@ Disamping adanya dokumentasi secara umum terkait Master Patient Index (MPI), mak
 
 ## 2. Tujuan
 
-Dokumentasi **Teknis Master Patient Index (MPI)** dibuat untuk kebutuhan informasi teknis/ReST API yang tersedia dari Master Patient Index (MPI) yang telah dikembangkan oleh tim _developer_ SATUSEHAT. Penjelasan teknis/ReST API Master Patient Index (MPI) didokumentasi ini hanya terbatas dari spesifikasi dari ReST API itu sendiri, penjelasan lengkap terkait Master Patient Index (MPI), akan dijelaskan pada dokumentasi tersendiri.
+Dokumentasi **Teknis Master Patient Index (MPI)** dibuat untuk kebutuhan informasi teknis/ReST API yang tersedia dari Master Patient Index (MPI) yang telah dikembangkan oleh tim _developer_ SehatMu. Penjelasan teknis/ReST API Master Patient Index (MPI) didokumentasi ini hanya terbatas dari spesifikasi dari ReST API itu sendiri, penjelasan lengkap terkait Master Patient Index (MPI), akan dijelaskan pada dokumentasi tersendiri.
 
-Dokumentasi SATUSEHAT Master Patient Index (MPI) ini terbagi menjadi beberapa bagian yang terdiri dari:
+Dokumentasi SehatMu Master Patient Index (MPI) ini terbagi menjadi beberapa bagian yang terdiri dari:
 
 1. Pengenalan MPI, berisi penjelasan secara umum terkait;
 2. Pasien dengan NIK;

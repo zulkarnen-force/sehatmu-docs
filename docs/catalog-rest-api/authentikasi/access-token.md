@@ -6,14 +6,14 @@ sidebar_position: 2
 
 ## Mendapatkan Token
 
-Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pada setiap request ReST API SATUSEHAT selanjutnya.
+Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pada setiap request ReST API SehatMu selanjutnya.
 
 ### Request
 
 #### URL
 
 ```url
-https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
+https://sehat.muhammadiyah.or.id/api/oauth/token
 ```
 
 #### HTTP Verb/Method
@@ -54,8 +54,8 @@ POST
 Setiap nilai yang dicontohkan atau ditampilkan di dokumentasi ini adalah nilai yang tidak sebenarnya dan tidak dapat dipakai. Nilai-nilai tersebut hanya untuk keperluan contoh saja, tidak untuk dipakai.
 
 ```yaml
-client_id: oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF
-client_secret: tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD
+client_id: 0d8d0652-3a1d-47c3-97a6-d5a513c5f285.sehatmu.client
+client_secret: 906959aa4211487066072588249854ac1ca54e06a54940bc35b3311fc594ed2a
 ```
 
 ### Response
@@ -64,34 +64,26 @@ Hasil response, dengan HTTP Status Code berpola 2xx atau 4xx, yang dikembalikan 
 
 #### 2xx Success
 
-Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari properti access_token, dimana tipe token (lihat properti token_type) tersebut adalah BearerToken. Nilai akses token tersebut WAJIB selalu digunakan sebagai nilai dari header Authorization: Bearer <access_token> saat melakukan request lainnya dari ReST API SATUSEHAT.
+Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari properti access_token, dimana tipe token (lihat properti token_type) tersebut adalah BearerToken. Nilai akses token tersebut WAJIB selalu digunakan sebagai nilai dari header Authorization: Bearer <access_token> saat melakukan request lainnya dari ReST API SehatMu.
 
 #### Struktur Data
 
 ```go
-{ (1)
-  *refresh_token_expires_in: number
-  *api_product_list: string
-  *api_product_list_json: [string]
-  *organization_name: string
-  *developer.email: string (2)
-  *token_type: string
-  *issued_at: string (3)
-  *client_id: string (4)
-  *access_token: string (5)
-  *application_name: uuid
-  *scope: number
-  *expires_in: string (6)
-  *refresh_count: number
-  *status: string
+{
+  accessToken: number
+  accessTokenExpiresAt: string
+  clientId: string
+  client: object
+  userId: string
+  user: object
 }
 ```
 
 <ol>
 <li>Respon yang diterima berupa object.</li>
-<li>Properti developer.email bertipe string, berisi informasi akun kredensial (email) pengguna pada API SatuSehat.</li>
+<li>Properti developer.email bertipe string, berisi informasi akun kredensial (email) pengguna pada API SehatMu.</li>
 <li>Properti issued_at bertipe string, berisi informasi waktu pembuatan access_token.</li>
-<li>Properti client_id bertipe string, berisi nilai akses API SATUSEHAT yang dapat dilihat pada website satusehat.kemkes.go.id/platf</li>orm.
+<li>Properti client_id bertipe string, berisi nilai akses API SehatMu yang dapat dilihat pada website SehatMu.kemkes.go.id/platf</li>orm.
 <li>Properti access_token bertipe string, berisi nilai bearer token untuk digunakan di header authorization pada pemanggilan API SAT</li>USEHAT.
 <li>Properti expires_in bertipe number, berisi informasi durasi waktu access_token dapat digunakan (dalam satuan detik).</li>
 </ol>
@@ -100,25 +92,19 @@ Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari prop
 
 ```json
 {
-  "refresh_token_expires_in": "0",
-  "api_product_list": "[api-satusehat-stg, api-dev, pl-api-satusehat-stg, pl-api-dev]",
-  "api_product_list_json": [
-    "api-satusehat-stg",
-    "api-dev",
-    "pl-api-satusehat-stg",
-    "pl-api-dev"
-  ],
-  "organization_name": "ihs-prod-1",
-  "developer.email": "ihs.developer@dto.kemkes.go.id",
-  "token_type": "BearerToken",
-  "issued_at": "1671109805593",
-  "client_id": "oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF",
-  "access_token": "k8JIDROZHfXjmUcQJE62lMqQwlLU",
-  "application_name": "992291b8-a613-40aa-b27c-41e480c7585f",
-  "scope": "",
-  "expires_in": "3599",
-  "refresh_count": "0",
-  "status": "approved"
+  "accessToken": "718d19c515f12c68dcfce7a97b7510c160c4678f",
+  "accessTokenExpiresAt": "2023-12-17T05:31:48.002Z",
+  "clientId": "3310fd56-10fb-4319-8044-9c0eb570a25f.sehatmu.client",
+  "client": {
+    "name": "John Doe System",
+    "email": "john.doe@example.com"
+  },
+  "userId": "64eb3286e34e01fa5887d9b6",
+  "user": {
+    "id": "64eb3286e34e01fa5887d9b6",
+    "email": "john.doe@example.com",
+    "name": "John Doe System"
+  }
 }
 ```
 
@@ -185,7 +171,7 @@ Gateway Timeout
 --data-urlencode "client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF" ^
 --data-urlencode "client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD" ^
 --request POST ^
-"https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials"
+"https://sehat.muhammadiyah.or.id/api/oauth/token"
 ```
 
 #### cURL (Linux)
@@ -197,7 +183,7 @@ Gateway Timeout
  --data-urlencode 'client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF' \
  --data-urlencode 'client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD' \
  --request POST \
- 'https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials'
+ 'https://sehat.muhammadiyah.or.id/api/oauth/token'
 ```
 
 #### Postman
@@ -207,7 +193,7 @@ Gateway Timeout
 2. Masukkan request URL:
 
 ```
-https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
+https://sehat.muhammadiyah.or.id/api/oauth/token
 ```
 
 3. Lalu pilih request method `POST`.

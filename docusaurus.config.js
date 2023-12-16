@@ -134,8 +134,16 @@ const config = {
         config: {
           onehealth: {
             // specPath: "examples/onehealth.openapi-27102023001.json",
-            specPath: "examples/openapi/sehatmu.openapi.yaml",
+            specPath: "examples/openapi/sehatmu.stable.openapi.yaml",
             outputDir: "docs/sandbox",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
+          burgers: {
+            specPath: "examples/openapi/sehatmu.openapi.yaml",
+            outputDir: "docs/sandbox/ongoing",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",

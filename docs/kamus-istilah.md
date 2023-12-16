@@ -30,11 +30,11 @@ Dalam pemrograman komputer, **whitespace** atau spasi adalah setiap karakter ata
 
 ## Modul Pelayanan
 
-Interoperabilitas SATUSEHAT yang penggunaannya disesuaikan dengan pelayanan esensial di lingkungan fasyankes, seperti: Resume Medis Rawat Jalan, Rawat Inap, dll.
+Interoperabilitas SehatMu yang penggunaannya disesuaikan dengan pelayanan esensial di lingkungan fasyankes, seperti: Resume Medis Rawat Jalan, Rawat Inap, dll.
 
 ## Penerapan (Use Case)
 
-Interoperabilitas SATUSEHAT yang penggunaannya disesuaikan dengan penerapan jenis/kategori penyakit tertentu, seperti: Skrining Hipotiroid Kongenital, Antenatal Care, Gizi, Tumbuh Kembang, dll.
+Interoperabilitas SehatMu yang penggunaannya disesuaikan dengan penerapan jenis/kategori penyakit tertentu, seperti: Skrining Hipotiroid Kongenital, Antenatal Care, Gizi, Tumbuh Kembang, dll.
 
 ## BPOM
 

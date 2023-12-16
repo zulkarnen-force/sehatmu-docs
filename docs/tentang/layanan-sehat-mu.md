@@ -6,20 +6,20 @@ sidebar_position: 2
 
 SehatMu memberikan layanan sebagai berikut:
 
-| layanan                                                             | description                                                                                                                                             |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Data Pokok Identitas Pasien (Master Patient Index)                  | Klien akan dapat mengambil nomor SATUSEHAT pasien dengan memberikan nomor Nomor Induk Kependudukan (NIK) dan/atau beberapa parameter demografi lainnya. |
-| Data Pokok Identitas Nakes (Master Nakes Index)                     | Klien akan dapat mengambil nomor praktisi kesehatan IHS dengan memberikan nomor NIK dan/atau beberapa parameter demografi lainnya.                      |
-| Data Kunjungan Pasien (Patient Registration)                        | Klien akan dapat mengirimkan informasi ketika pasien mengunjungi institusi.                                                                             |
-| Mengirimkan Data Diagnostik Pasien (Submit Patient Diagnostic Data) | Klien akan dapat mengirimkan informasi ketika ada hasil diagnostik dari kunjungan pasien.                                                               |
+| layanan                                                             | description                                                                                                                                           |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Data Pokok Identitas Pasien (Master Patient Index)                  | Klien akan dapat mengambil nomor SehatMu pasien dengan memberikan nomor Nomor Induk Kependudukan (NIK) dan/atau beberapa parameter demografi lainnya. |
+| Data Pokok Identitas Nakes (Master Nakes Index)                     | Klien akan dapat mengambil nomor praktisi kesehatan IHS dengan memberikan nomor NIK dan/atau beberapa parameter demografi lainnya.                    |
+| Data Kunjungan Pasien (Patient Registration)                        | Klien akan dapat mengirimkan informasi ketika pasien mengunjungi institusi.                                                                           |
+| Mengirimkan Data Diagnostik Pasien (Submit Patient Diagnostic Data) | Klien akan dapat mengirimkan informasi ketika ada hasil diagnostik dari kunjungan pasien.                                                             |
 
 ## Pengenalan Master Data Index
 
-Standardisasi kamus yang dapat digunakan oleh seluruh stakeholder kesehatan melalui SATUSEHAT untuk mendapatkan standarisasi data pasien, tenaga kesehatan, bidan dan lain-lain. Master Data Index tersebut terdiri dari:
+Standardisasi kamus yang dapat digunakan oleh seluruh stakeholder kesehatan melalui SehatMu untuk mendapatkan standarisasi data pasien, tenaga kesehatan, bidan dan lain-lain. Master Data Index tersebut terdiri dari:
 
 ### Data Pasien (Master Patient Index)
 
-Data produk yang didesain khusus sebagai standar data pasien yang akan tervalidasi oleh Data Kependudukan dan Catatan Sipil (Dukcapil) untuk data yang berkaitan dengan demografi. Dapat digunakan sebagai standar utama data pasien oleh seluruh Fasilitas Pelayanan Kesehatan di Indonesia via SATUSEHAT.
+Data produk yang didesain khusus sebagai standar data pasien yang akan tervalidasi oleh Data Kependudukan dan Catatan Sipil (Dukcapil) untuk data yang berkaitan dengan demografi. Dapat digunakan sebagai standar utama data pasien oleh seluruh Fasilitas Pelayanan Kesehatan di Indonesia via SehatMu.
 
 ### Data Tenaga Kesehatan [Nakes] (Master Nakes Index)
 

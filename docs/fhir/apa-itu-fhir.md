@@ -6,9 +6,9 @@ sidebar_position: 1
 
 _Terakhir disunting pada 3 Agustus 2023_
 
-**SATUSEHAT** menggunakan **HL7** FHIR dalam pengimplementasian standar data model dan Application Programming Interface (API).
+**SehatMu** menggunakan **HL7** FHIR dalam pengimplementasian standar data model dan Application Programming Interface (API).
 
-_Fast Healthcare Interoperability Resources_ FHIR adalah sebuah standar global (internasional) yang menetapkan format data beserta elemen-elemennya (yang disebut "resources") dan sebuah standar antarmuka pemrograman aplikasi (API/Application Programming Interface) untuk pertukaran informasi (interoperabilitas SATUSEHAT) yang pada penerapannya akan dibagi-bagi lagi menjadi beberapa alur proses sesuai penggunaannya (use case) baik use case dasar maupun use case tematik. FHIR dibaca “fire” dalam bahasa Inggris (/faier/).
+_Fast Healthcare Interoperability Resources_ FHIR adalah sebuah standar global (internasional) yang menetapkan format data beserta elemen-elemennya (yang disebut "resources") dan sebuah standar antarmuka pemrograman aplikasi (API/Application Programming Interface) untuk pertukaran informasi (interoperabilitas SehatMu) yang pada penerapannya akan dibagi-bagi lagi menjadi beberapa alur proses sesuai penggunaannya (use case) baik use case dasar maupun use case tematik. FHIR dibaca “fire” dalam bahasa Inggris (/faier/).
 
 Standar ini dibuat oleh _Health Level Seven International_ (HL7), yaitu sebuah organisasi standar pelayanan kesehatan (healthcare standards organization). Situs terkait: [https://www.hl7.org/fhir/](https://www.hl7.org/fhir/).
 

@@ -56,13 +56,13 @@ Tabel 1. Persyaratan data minimum pasien baru dengan NIK:
 
 ## 2. Alur Pembuatan Data
 
-Untuk membuat data pasien baru dengan NIK di SATUSEHAT, silahkan ikut langkah-langkah berikut:
+Untuk membuat data pasien baru dengan NIK di SehatMu, silahkan ikut langkah-langkah berikut:
 
 Tabel 1. Alur pembuatan data (NIK):
 
-| Langkah                                                                                                | Approach                   |
-| ------------------------------------------------------------------------------------------------------ | -------------------------- |
-| Langkah 1: GET Patient Record dari Pasien berdasarkan NIK (Pastikan data pasien ada di FHIR SATUSEHAT) | Search by `nomor IHS` atau |
+| Langkah                                                                                              | Approach                   |
+| ---------------------------------------------------------------------------------------------------- | -------------------------- |
+| Langkah 1: GET Patient Record dari Pasien berdasarkan NIK (Pastikan data pasien ada di FHIR SehatMu) | Search by `nomor IHS` atau |
 
 Search by NIK untuk `GET` `nomor IHS`
 Parameter yang didapatkan:
@@ -90,21 +90,21 @@ Parameter yang didapatkan:
 
 ## 3. Alur Mendapatkan Data
 
-Fasyankes dapat memperoleh data pasien baru dengan NIK di SATUSEHAT, dengan menggunakan opsi berikut:
+Fasyankes dapat memperoleh data pasien baru dengan NIK di SehatMu, dengan menggunakan opsi berikut:
 
 Tabel 1. Alur mendapatkan data:
 
-| Options                                                                                  | Approach                                                        |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Option 1: Gunakan `Nomor IHS` Pasien ke SATUSEHAT. (Use Patient IHS Number to SATUSEHAT) | Jika `Nomor IHS` sudah benar, maka akan dikirimkan data Pasien. |
+| Options                                                                              | Approach                                                        |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| Option 1: Gunakan `Nomor IHS` Pasien ke SehatMu. (Use Patient IHS Number to SehatMu) | Jika `Nomor IHS` sudah benar, maka akan dikirimkan data Pasien. |
 
 Informasi yang akan dikirim kembali ke APIGEE:
 
 - `NIK` |
-  | Option 2a: Gunakan NIK Pasien sebagai parameter `Identifier` untuk SATUSEHAT. | Memeriksa NIK
+  | Option 2a: Gunakan NIK Pasien sebagai parameter `Identifier` untuk SehatMu. | Memeriksa NIK
   Informasi yang akan dikirim kembali ke APIGEE:
 - `IHS Number Pasien` |
-  | Option 2b: Gunakan NIK Pasien sebagai parameter `Identifier` untuk SATUSEHAT dan informasi sesuai KTP/NIK. | Memeriksa NIK, Nama, dan Tanggal Lahir Pasien.
+  | Option 2b: Gunakan NIK Pasien sebagai parameter `Identifier` untuk SehatMu dan informasi sesuai KTP/NIK. | Memeriksa NIK, Nama, dan Tanggal Lahir Pasien.
   Informasi yang akan dikirim kembali ke APIGEE:
 - `Nama Pasien`
 - `Tanggal Lahir Pasien`

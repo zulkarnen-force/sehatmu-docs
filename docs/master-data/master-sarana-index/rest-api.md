@@ -20,14 +20,14 @@ Silakan mengunduh Postman Collection untuk melihat contoh/melakukan workshop sec
 
 ### Mendapatkan Token
 
-Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pada setiap request ReST API SATUSEHAT selanjutnya.
+Melakukan proses autentikasi untuk mendapatkan akses token yang akan dipakai pada setiap request ReST API SehatMu selanjutnya.
 
 #### Request
 
 #### URL
 
 ```
-https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
+https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
 ```
 
 #### HTTP Verb/Method
@@ -106,16 +106,16 @@ Hasil response, dengan HTTP Status Code berpola 2xx atau 4xx, yang dikembalikan 
 
 ### 2xx Success
 
-Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari properti access_token, dimana tipe token (lihat properti token_type) tersebut adalah BearerToken. Nilai akses token tersebut WAJIB selalu digunakan sebagai nilai dari header Authorization: Bearer <access_token> saat melakukan request lainnya dari ReST API SATUSEHAT.
+Dari hasil response ini, PERLU disimpan nilai akses token yang didapat dari properti access_token, dimana tipe token (lihat properti token_type) tersebut adalah BearerToken. Nilai akses token tersebut WAJIB selalu digunakan sebagai nilai dari header Authorization: Bearer <access_token> saat melakukan request lainnya dari ReST API SehatMu.
 
 ```json
 {
   "refresh_token_expires_in": "0",
-  "api_product_list": "[api-satusehat-stg, api-dev, pl-api-satusehat-stg, pl-api-dev]",
+  "api_product_list": "[api-SehatMu-stg, api-dev, pl-api-SehatMu-stg, pl-api-dev]",
   "api_product_list_json": [
-    "api-satusehat-stg",
+    "api-SehatMu-stg",
     "api-dev",
-    "pl-api-satusehat-stg",
+    "pl-api-SehatMu-stg",
     "pl-api-dev"
   ],
   "organization_name": "ihs-prod-1",
@@ -175,7 +175,7 @@ Setiap nilai yang dicontohkan atau ditampilkan di dokumentasi ini adalah nilai y
 --data-urlencode "client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF" ^
 --data-urlencode "client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD" ^
 --request POST ^
-"https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials"
+"https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials"
 ```
 
 ### cURL (Linux)
@@ -186,7 +186,7 @@ Setiap nilai yang dicontohkan atau ditampilkan di dokumentasi ini adalah nilai y
  --data-urlencode 'client_id=oGt4MwoRp35O6Bg3LaWwXuIPQGj9FmXvKUGezvwXr4fuJicF' \
  --data-urlencode 'client_secret=tFb3el8LGjW08mWcGLyBDdiJp1hwymrAb9qrmhapuV7WcDhVq2u9n9diBVGfMRfD' \
  --request POST \
- 'https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials'
+ 'https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken?grant_type=client_credentials'
 ```
 
 ### Postman
@@ -196,7 +196,7 @@ Setiap nilai yang dicontohkan atau ditampilkan di dokumentasi ini adalah nilai y
 2. Masukan _request_ URL:
 
 ```
-https://api-satusehat-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
+https://api-SehatMu-dev.dto.kemkes.go.id/oauth2/v1/accesstoken
 ```
 
 3. Lalu pilih _request method_ `POST`.
@@ -234,7 +234,7 @@ e. terakhir masukan nilai _client secret_ yang sudah didapatkan dari **Pusat Dat
 ### URL
 
 ```
-https://api-satusehat.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
+https://api-SehatMu.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
 ```
 
 ### HTTP Verb/Method
@@ -256,7 +256,7 @@ GET
 | `*limit`                 | `number`  | Isi dengan nomor banyaknya barisan dalam 1 halaman (page) yang diinginkan. Contoh: `1`.                                                                                                                                                                                                                                                                                                                                                 |
 | `*page`                  | `number`  | Isi dengan nomor halaman (page) yang diinginkan. Contoh: `10`.                                                                                                                                                                                                                                                                                                                                                                          |
 | `*jenis_sarana`          | `number`  | Jika parameter `jenis_sarana` ingin di-input multi maka tambahkan key `jenis_sarana` sesuai kebutuhan. Isi dengan kode jenis sarana. Kode unik yang ditetapkan untuk menentukan sarana fasyankes. Contoh: `104` dan `103`.                                                                                                                                                                                                              |
-| `kode_satusehat`         | `number`  | Isi dengan nomor kode satusehat (10 digit). Contoh: `1000201991`.                                                                                                                                                                                                                                                                                                                                                                       |
+| `kode_SehatMu`           | `number`  | Isi dengan nomor kode SehatMu (10 digit). Contoh: `1000201991`.                                                                                                                                                                                                                                                                                                                                                                         |
 | `kode_sarana`            | `string`  | Isi dengan nomor kode FASYANKES dari sumber data utama. Contoh: `1235959`.                                                                                                                                                                                                                                                                                                                                                              |
 | `nama`                   | `string`  | Isi dengan nama FASYANKES. Contoh: `pratama`.                                                                                                                                                                                                                                                                                                                                                                                           |
 | `kode_provinsi`          | `string`  | Isi dengan nomor kode dagri provinsi (2 digit). Contoh: `35`.                                                                                                                                                                                                                                                                                                                                                                           |
@@ -285,7 +285,7 @@ DATA STRUCTURE:
   *page: integer (4)
   *total_page: integer (5)
   *data: [{ (6)
-    *kode_satusehat: string (7)
+    *kode_SehatMu: string (7)
     *kode_sarana: string (8)
     *nama: string (9)
     *telp: string (10)
@@ -343,7 +343,7 @@ DATA STRUCTURE:
 | 3   | Properti `page` bertipe `integer`, berisi berapa baris halaman yang ingin ditampilkan.                                                                                                  |
 | 4   | Properti `total_page` bertipe `integer`, total dari hasil pencarian.                                                                                                                    |
 | 5   | Properti `data` bertipe `array of objects`, bila kosong akan mengembalikan array kosong. Setiap object item berisi data FASYANKES (Rumah Sakit, Klinik, Puskesmas, Praktek Mandiri).    |
-| 6   | Properti `kode_satusehat` bertipe `string`, berisi informasi kode satu sehat (10 digit).                                                                                                |
+| 6   | Properti `kode_SehatMu` bertipe `string`, berisi informasi kode satu sehat (10 digit).                                                                                                  |
 | 7   | Properti `kode_sarana` bertipe `string`, berisi informasi kode FASYANKES.                                                                                                               |
 | 8   | Properti `nama` bertipe `string`, berisi informasi nama FASYANKES.                                                                                                                      |
 | 9   | Properti `telp` bertipe `string`, berisi informasi nomor telepon FASYANKES.                                                                                                             |
@@ -355,7 +355,7 @@ DATA STRUCTURE:
 | 15  | Properti `wilayah_perairan_darat` bertipe `string`, wilayah perairan darat.                                                                                                             |
 | 16  | Properti `wilayah_karakteristik` bertipe `string`, wilayah karakteristik.                                                                                                               |
 | 17  | Properti `sarana_administrasi` bertipe `object`, data sarana administrasi.                                                                                                              |
-| 18  | Properti `kode` bertipe `string`, kode satusehat (10 digit) dari FASYANKES yang dinyatakan sebagai induk untuk administratif.                                                           |
+| 18  | Properti `kode` bertipe `string`, kode SehatMu (10 digit) dari FASYANKES yang dinyatakan sebagai induk untuk administratif.                                                             |
 | 19  | Properti `nama` bertipe `string`, nama FASYANKES yang dinyatakan sebagai induk untuk administratif.                                                                                     |
 | 20  | Properti `kode_sarana` bertipe `string`, kode FASYANKES dari sumber data utama yang dinyatakan sebagai induk untuk administratif.                                                       |
 | 21  | Properti `status_aktif` bertipe `string`, status keaktifan dari FASYANKES (_true_) atau tidak (_false_).                                                                                |
@@ -395,7 +395,7 @@ DATA STRUCTURE:
   "total_page": 1849,
   "data": [
     {
-      "kode_satusehat": "1000156689",
+      "kode_SehatMu": "1000156689",
       "kode_sarana": "1230458",
       "nama": "Klinik TelkoMedika Health Center 19 Bogor",
       "telp": "082128617274_",
@@ -445,7 +445,7 @@ DATA STRUCTURE:
     },
     /* lompat beberapa data */
     {
-      "kode_satusehat": "1000208262",
+      "kode_SehatMu": "1000208262",
       "kode_sarana": "1232475",
       "nama": "Satria Namira Husada 49",
       "telp": "0811324033___",
@@ -494,7 +494,7 @@ DATA STRUCTURE:
       "status_aktif": true
     },
     {
-      "kode_satusehat": "1000262775",
+      "kode_SehatMu": "1000262775",
       "kode_sarana": "3275070",
       "nama": "RS umum Daerah Teluk Pucung",
       "telp": null,
@@ -544,7 +544,7 @@ DATA STRUCTURE:
     },
     /* lompat beberapa data */
     {
-      "kode_satusehat": "1000260600",
+      "kode_SehatMu": "1000260600",
       "kode_sarana": "9110011",
       "nama": "RS Umum Pratama Type D Kab. Maybrat",
       "telp": "085244394272_",
@@ -628,7 +628,7 @@ Gateway Timeout
 --location ^
   --header "Authorization: Bearer {bearer_token}" ^
   --request GET ^
-  "https://api-satusehat.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana"
+  "https://api-SehatMu.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana"
 ```
 
 ### cURL (Linux)
@@ -637,7 +637,7 @@ Gateway Timeout
 --location \
  --header 'Authorization: Bearer {bearer_token}' \
  --request GET \
- 'https://api-satusehat.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana'
+ 'https://api-SehatMu.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana'
 ```
 
 ### Postman
@@ -647,7 +647,7 @@ Gateway Timeout
 2. Masukan _request_ URL:
 
 ```
-https://api-satusehat.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
+https://api-SehatMu.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
 ```
 
 3. Lalu pilih _request method_ `GET`.
@@ -664,7 +664,7 @@ https://api-satusehat.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
 ### URL
 
 ```
-https://api-satusehat.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
+https://api-SehatMu.kemkes.go.id/masterdata/v1/mastersaranaindex/mastersarana
 ```
 
 ### HTTP Verb/Method

@@ -23,5 +23,5 @@ SehatMu adalah ekosistem pertukaran data kesehatan (HIE: Health Information Exch
 
 <li>Memastikan agar pemrogram (software developer) dapat menggunakan bahasa apapun untuk mengembangkan aplikasinya dengan spesifikasi dan mekanisme pertukaran data (Health Level Seven International - Fast Healthcare Interoperability Resources [HL7 FHIR] dan Hypertext Transfer Protocol Secure RESTful Application Programming Interface [HTTPS REST API]).</li>
 
-<li>Mengeluarkan nomor SATUSEHAT yang akan menjadi tanda pengenal (single identifier) informasi kesehatan pasien untuk memastikan setiap masyarakat Indonesia dapat mengakses layanan kesehatan yang berkesinambungan.</li>
+<li>Mengeluarkan nomor SehatMu yang akan menjadi tanda pengenal (single identifier) informasi kesehatan pasien untuk memastikan setiap masyarakat Indonesia dapat mengakses layanan kesehatan yang berkesinambungan.</li>
 </ol>

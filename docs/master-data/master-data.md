@@ -1,10 +1,10 @@
 # Master Data
 
-Standardisasi kamus yang dapat digunakan oleh seluruh stakeholder kesehatan melalui SATUSEHAT untuk mendapatkan standarisasi data pasien, tenaga kesehatan, bidan dan lain-lain. Master Data Index tersebut terdiri dari:
+Standardisasi kamus yang dapat digunakan oleh seluruh stakeholder kesehatan melalui SehatMu untuk mendapatkan standarisasi data pasien, tenaga kesehatan, bidan dan lain-lain. Master Data Index tersebut terdiri dari:
 
 ## Master Patient Index (MPI)
 
-Data produk yang didesain khusus sebagai standar data pasien yang akan tervalidasi oleh Data Kependudukan dan Catatan Sipil (Dukcapil) untuk data yang berkaitan dengan demografi. Dapat digunakan sebagai standar utama data pasien oleh seluruh Fasilitas Pelayanan Kesehatan di Indonesia via SATUSEHAT.
+Data produk yang didesain khusus sebagai standar data pasien yang akan tervalidasi oleh Data Kependudukan dan Catatan Sipil (Dukcapil) untuk data yang berkaitan dengan demografi. Dapat digunakan sebagai standar utama data pasien oleh seluruh Fasilitas Pelayanan Kesehatan di Indonesia via SehatMu.
 
 ## Master Sarana Index (MSI)
 
