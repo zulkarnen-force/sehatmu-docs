@@ -141,8 +141,8 @@ const config = {
               categoryLinkSource: "tag",
             },
           },
-          burgers: {
-            specPath: "examples/openapi/sehatmu.openapi.yaml",
+          candidate: {
+            specPath: "examples/openapi/sehatmu.candidate.openapi.yaml",
             outputDir: "docs/sandbox/ongoing",
             sidebarOptions: {
               groupPathsBy: "tag",
