@@ -8,14 +8,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "SehatMu",
   tagline: "SehatMu, untuk kesehatan Muhammadiyah",
+  // url: "https://sehat.muhammadiyah.or.id",
+  // baseUrl: "/guide",
   url: "https://jerusalem.muhammadiyah.or.id",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/sehat-mu.png",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
 
@@ -60,7 +59,7 @@ const config = {
         logo: {
           alt: "SehatMu Logo",
           src: "img/sehatmu2.png",
-          href: "https://glasgow.muhammadiyah.or.id",
+          href: "https://sehat.muhammadiyah.or.id",
         },
         items: [
           {
@@ -77,7 +76,7 @@ const config = {
           },
           {
             href: "https://git.muhammadiyah.or.id/",
-            label: "GitLab",
+            label: "GitMu",
             position: "right",
           },
         ],
@@ -133,7 +132,6 @@ const config = {
         docsPluginId: "classic",
         config: {
           onehealth: {
-            // specPath: "examples/onehealth.openapi-27102023001.json",
             specPath: "examples/openapi/sehatmu.stable.openapi.yaml",
             outputDir: "docs/sandbox",
             sidebarOptions: {

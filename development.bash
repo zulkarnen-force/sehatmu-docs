@@ -1,0 +1,1 @@
+rsync -arvz -e  'ssh -p 10123' --progress --delete  ./build/ vm001labmu@103.19.182.20:/app/sehatmu-developer/build/
