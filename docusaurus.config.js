@@ -8,13 +8,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "SehatMu",
   tagline: "SehatMu, untuk kesehatan Muhammadiyah",
-  // url: "https://sehat.muhammadiyah.or.id",
-  // baseUrl: "/guide",
-  url: "https://jerusalem.muhammadiyah.or.id",
-  baseUrl: "/",
+  url: "https://sehat.muhammadiyah.or.id",
+  baseUrl: "/guide",
+  // url: "https://jerusalem-dev.muhammadiyah.or.id",
+  // baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/sehat-mu.png",
+  favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
 
@@ -58,7 +58,7 @@ const config = {
         title: "",
         logo: {
           alt: "SehatMu Logo",
-          src: "img/sehatmu2.png",
+          src: "img/logo.png",
           href: "https://sehat.muhammadiyah.or.id",
         },
         items: [
