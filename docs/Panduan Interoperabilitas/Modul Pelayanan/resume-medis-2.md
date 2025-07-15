@@ -8,7 +8,7 @@ Panduan SehatMu Use Case Resume Medis Rawat Jalan terdiri dari 2 jilid yaitu:
 
 Tahapan alur interoperabilitas dan resource yang digunakan untuk Resume Medis Rawat Jalan dapat dilihat pada gambar di bawah ini.
 
-![Alur Integrasi Resume Medis Rawat Jalan](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/_images/diagram-rawjal.png)
+![Alur Integrasi Resume Medis Rawat Jalan](/img/diagram-rawjal.png)
 
 Alur integrasi dan format pengiriman data terkait pemeriksaan penunjang akan dijelaskan pada Buku Panduan SehatMu Resume Medis Rawat Jalan Jilid 2. Adapun langkah yang akan dijelaskan pada Buku Panduan SehatMu Resume Medis Rawat Jalan Jilid 2 yaitu:
 

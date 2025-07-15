@@ -6,7 +6,7 @@ Panduan SehatMu _Use Case_ Resume Medis Rawat Jalan terdiri dari 2 jilid yaitu:
 2.  [Jilid 2](#content:id:modules:interoperability:pages:rme-rawat-jalan2:index.adoc): Alur interoperabilitas untuk pemeriksaan penunjang (laboratorium dan radiologi)
 
 Tahapan alur interoperabilitas dan _resource_ yang digunakan untuk **Resume Medis Rawat Jalan** dapat dilihat pada gambar di bawah ini.
-![Diagram Resume Medis Rawat Jalan](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/_images/diagram-rawjal.png)
+![Diagram Resume Medis Rawat Jalan](/img/diagram-rawjal.png)
 
 Gambar 1. Alur Integrasi Resume Medis Rawat Jalan
 
@@ -124,37 +124,15 @@ Terminologi spesifik yang digunakan dalam pengiriman data keluhan utama melalui 
 
 Tabel 2. Pemetaan Variabel dan Terminologi Spesifik
 
-Pemetaan Variabel Resource Condition
-
-**Elemen/Path FHIR**
-
-**Terminologi/Format Pengisian**
-
-**1\. Keluhan Utama**
-
-**`Condition.category.coding.system`**
-
-**[http://terminology.hl7.org/CodeSystem/condition-category](http://terminology.hl7.org/CodeSystem/condition-category)**
-
-**`Condition.category.coding.code`**
-
-**problem-list-item**
-
-**`Condition.category.coding.display`**
-
-**Problem List Item**
-
-**`Condition.code.coding.system`**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**`Condition.code.coding.code`**
-
-**SNOMED-CT code**
-
-**`Condition.code.coding.display`**
-
-**SNOMED-CT Description**
+| **Elemen/Path FHIR**                | **Terminologi/Format Pengisian**                                                                                     |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **1. Keluhan Utama**                |                                                                                                                      |
+| `Condition.category.coding.system`  | [http://terminology.hl7.org/CodeSystem/condition-category](http://terminology.hl7.org/CodeSystem/condition-category) |
+| `Condition.category.coding.code`    | problem-list-item                                                                                                    |
+| `Condition.category.coding.display` | Problem List Item                                                                                                    |
+| `Condition.code.coding.system`      | [http://snomed.info/sct](http://snomed.info/sct)                                                                     |
+| `Condition.code.coding.code`        | SNOMED-CT code                                                                                                       |
+| `Condition.code.coding.display`     | SNOMED-CT Description                                                                                                |
 
 ## [](#_pengiriman_data_alergi)Pengiriman Data Alergi
 
@@ -247,221 +225,63 @@ Terminologi spesifik yang digunakan dalam pengiriman data tanda vital melalui _r
 
 Tabel 3. Terminologi spesifik yang digunakan dalam pengiriman data tanda vital melalui resource Observation
 
-Pemetaan Variabel Resource Observation
-
-**Elemen/Path FHIR**
-
-**Terminologi/Format Pengisian**
-
-**Denyut Jantung**
-
-**`Observation.category[i].coding[i].system`**
-
-**[http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category)**
-
-**`Observation.category[i].coding[i].code`**
-
-**vital-signs**
-
-**`Observation.category[i].coding[i].display`**
-
-**Vital Signs**
-
-**`*Observation.code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`*Observation.code.coding.code`**
-
-**8867-4**
-
-**`*Observation.code.coding.display`**
-
-**Heart rate**
-
-**`Observation.valueQuantity.value`**
-
-**_(Tipe data Decimal)_**
-
-**`Observation.valueQuantity.unit`**
-
-**beats/min**
-
-**`Observation.valueQuantity.system`**
-
-**[http://unitsofmeasure.org](http://unitsofmeasure.org)**
-
-**`Observation.valueQuantity.code`**
-
-**/min**
-
-**Pernapasan**
-
-**`Observation.category[i].coding[i].system`**
-
-**[http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category)**
-
-**`Observation.category[i].coding[i].code`**
-
-**vital-signs**
-
-**`Observation.category[i].coding[i].display`**
-
-**Vital Signs**
-
-**`*Observation.code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`*Observation.code.coding.code`**
-
-**9279-1**
-
-**`*Observation.code.coding.display`**
-
-**Respiratory rate**
-
-**`Observation.valueQuantity.value`**
-
-**_(Tipe data Decimal)_**
-
-**`Observation.valueQuantity.unit`**
-
-**breaths/min**
-
-**`Observation.valueQuantity.system`**
-
-**[http://unitsofmeasure.org](http://unitsofmeasure.org)**
-
-**`Observation.valueQuantity.code`**
-
-**/min**
-
-**Tekanan Darah Sistole**
-
-**`Observation.category[i].coding[i].system`**
-
-**[http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category)**
-
-**`Observation.category[i].coding[i].code`**
-
-**vital-signs**
-
-**`Observation.category[i].coding[i].display`**
-
-**Vital Signs**
-
-**`*Observation.code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`*Observation.code.coding.code`**
-
-**8480-6**
-
-**`*Observation.code.coding.display`**
-
-**Systolic blood pressure**
-
-**`Observation.valueQuantity.value`**
-
-**_(Tipe data Decimal)_**
-
-**`Observation.valueQuantity.unit`**
-
-**mm\[Hg\]**
-
-**`Observation.valueQuantity.system`**
-
-**[http://unitsofmeasure.org](http://unitsofmeasure.org)**
-
-**`Observation.valueQuantity.code`**
-
-**mm\[Hg\]**
-
-**Tekanan Darah Diastole**
-
-**`Observation.category[i].coding[i].system`**
-
-**[http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category)**
-
-**`Observation.category[i].coding[i].code`**
-
-**vital-signs**
-
-**`Observation.category[i].coding[i].display`**
-
-**Vital Signs**
-
-**`*Observation.code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`*Observation.code.coding.code`**
-
-**8462-4**
-
-**`*Observation.code.coding.display`**
-
-**Diastolic blood pressure**
-
-**`Observation.valueQuantity.value`**
-
-**_(Tipe data Decimal)_**
-
-**`Observation.valueQuantity.unit`**
-
-**mm\[Hg\]**
-
-**`Observation.valueQuantity.system`**
-
-**[http://unitsofmeasure.org](http://unitsofmeasure.org)**
-
-**`Observation.valueQuantity.code`**
-
-**mm\[Hg\]**
-
-**Suhu Tubuh**
-
-**`Observation.category[i].coding[i].system`**
-
-**[http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category)**
-
-**`Observation.category[i].coding[i].code`**
-
-**vital-signs**
-
-**`Observation.category[i].coding[i].display`**
-
-**Vital Signs**
-
-**`*Observation.code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`*Observation.code.coding.code`**
-
-**8310-5**
-
-**`*Observation.code.coding.display`**
-
-**Body temperature**
-
-**`Observation.valueQuantity.value`**
-
-**_(Tipe data Decimal)_**
-
-**`Observation.valueQuantity.unit`**
-
-**C**
-
-**`Observation.valueQuantity.system`**
-
-**[http://unitsofmeasure.org](http://unitsofmeasure.org)**
-
-**`Observation.valueQuantity.code`**
-
-**Cel**
+| **Elemen/Path FHIR**                        | **Terminologi/Format Pengisian**                                                                                         |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Denyut Jantung**                          |                                                                                                                          |
+| `Observation.category[i].coding[i].system`  | [http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category) |
+| `Observation.category[i].coding[i].code`    | vital-signs                                                                                                              |
+| `Observation.category[i].coding[i].display` | Vital Signs                                                                                                              |
+| `*Observation.code.coding.system`           | [http://loinc.org](http://loinc.org)                                                                                     |
+| `*Observation.code.coding.code`             | 8867-4                                                                                                                   |
+| `*Observation.code.coding.display`          | Heart rate                                                                                                               |
+| `Observation.valueQuantity.value`           | _(Tipe data Decimal)_                                                                                                    |
+| `Observation.valueQuantity.unit`            | beats/min                                                                                                                |
+| `Observation.valueQuantity.system`          | [http://unitsofmeasure.org](http://unitsofmeasure.org)                                                                   |
+| `Observation.valueQuantity.code`            | /min                                                                                                                     |
+| **Pernapasan**                              |                                                                                                                          |
+| `Observation.category[i].coding[i].system`  | [http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category) |
+| `Observation.category[i].coding[i].code`    | vital-signs                                                                                                              |
+| `Observation.category[i].coding[i].display` | Vital Signs                                                                                                              |
+| `*Observation.code.coding.system`           | [http://loinc.org](http://loinc.org)                                                                                     |
+| `*Observation.code.coding.code`             | 9279-1                                                                                                                   |
+| `*Observation.code.coding.display`          | Respiratory rate                                                                                                         |
+| `Observation.valueQuantity.value`           | _(Tipe data Decimal)_                                                                                                    |
+| `Observation.valueQuantity.unit`            | breaths/min                                                                                                              |
+| `Observation.valueQuantity.system`          | [http://unitsofmeasure.org](http://unitsofmeasure.org)                                                                   |
+| `Observation.valueQuantity.code`            | /min                                                                                                                     |
+| **Tekanan Darah Sistole**                   |                                                                                                                          |
+| `Observation.category[i].coding[i].system`  | [http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category) |
+| `Observation.category[i].coding[i].code`    | vital-signs                                                                                                              |
+| `Observation.category[i].coding[i].display` | Vital Signs                                                                                                              |
+| `*Observation.code.coding.system`           | [http://loinc.org](http://loinc.org)                                                                                     |
+| `*Observation.code.coding.code`             | 8480-6                                                                                                                   |
+| `*Observation.code.coding.display`          | Systolic blood pressure                                                                                                  |
+| `Observation.valueQuantity.value`           | _(Tipe data Decimal)_                                                                                                    |
+| `Observation.valueQuantity.unit`            | mm\[Hg\]                                                                                                                 |
+| `Observation.valueQuantity.system`          | [http://unitsofmeasure.org](http://unitsofmeasure.org)                                                                   |
+| `Observation.valueQuantity.code`            | mm\[Hg\]                                                                                                                 |
+| **Tekanan Darah Diastole**                  |                                                                                                                          |
+| `Observation.category[i].coding[i].system`  | [http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category) |
+| `Observation.category[i].coding[i].code`    | vital-signs                                                                                                              |
+| `Observation.category[i].coding[i].display` | Vital Signs                                                                                                              |
+| `*Observation.code.coding.system`           | [http://loinc.org](http://loinc.org)                                                                                     |
+| `*Observation.code.coding.code`             | 8462-4                                                                                                                   |
+| `*Observation.code.coding.display`          | Diastolic blood pressure                                                                                                 |
+| `Observation.valueQuantity.value`           | _(Tipe data Decimal)_                                                                                                    |
+| `Observation.valueQuantity.unit`            | mm\[Hg\]                                                                                                                 |
+| `Observation.valueQuantity.system`          | [http://unitsofmeasure.org](http://unitsofmeasure.org)                                                                   |
+| `Observation.valueQuantity.code`            | mm\[Hg\]                                                                                                                 |
+| **Suhu Tubuh**                              |                                                                                                                          |
+| `Observation.category[i].coding[i].system`  | [http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category) |
+| `Observation.category[i].coding[i].code`    | vital-signs                                                                                                              |
+| `Observation.category[i].coding[i].display` | Vital Signs                                                                                                              |
+| `*Observation.code.coding.system`           | [http://loinc.org](http://loinc.org)                                                                                     |
+| `*Observation.code.coding.code`             | 8310-5                                                                                                                   |
+| `*Observation.code.coding.display`          | Body temperature                                                                                                         |
+| `Observation.valueQuantity.value`           | _(Tipe data Decimal)_                                                                                                    |
+| `Observation.valueQuantity.unit`            | C                                                                                                                        |
+| `Observation.valueQuantity.system`          | [http://unitsofmeasure.org](http://unitsofmeasure.org)                                                                   |
+| `Observation.valueQuantity.code`            | Cel                                                                                                                      |
 
 ### [](#_pemetaan_nilai_tingkat_kesadaran)Pemetaan Nilai Tingkat Kesadaran
 
@@ -487,93 +307,33 @@ Terminologi spesifik yang digunakan dalam pengiriman data tingkat kesadaran mela
 
 Tabel 4. Terminologi spesifik yang digunakan dalam pengiriman data tingkat kesadaran melalui resource Observation
 
-Resource Observation
-
-**Elemen/Path FHIR**
-
-**Terminologi/Format Pengisian**
-
-**Tingkat Kesadaran**
-
-**`Observation.category[i].coding.system`**
-
-**[http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category)**
-
-**`Observation.category[i].coding.code`**
-
-**exam**
-
-**`Observation.category[i].coding.display`**
-
-**Exam**
-
-**`*Observation.code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`*Observation.code.coding.code`**
-
-**67775-7**
-
-**`*Observation.code.coding.display`**
-
-**Level of responsiveness**
-
-**`Observation.valueCodeableConcept[i].coding.system`**
-
-**`Observation.valueCodeableConcept[i].coding.code`**
-
-**`Observation.valueCodeableConcept[i].coding.display`**
-
-**Keterangan**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**248234008**
-
-**Mentally alert**
-
-**1\. Sadar Baik/Alert: 0**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**300202002**
-
-**Response to voice**
-
-**2\. Berespon dengan kata-kata/Voice: 1**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**450847001**
-
-**Response to pain**
-
-**3\. Hanya berespons jika dirangsang nyeri/pain: 2**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**422768004**
-
-**Unresponsive**
-
-**4\. Pasien tidak sadar/unresponsive: 3**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**130987000**
-
-**Acute confusion**
-
-**5\. Gelisah atau bingung: 4**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**2776000**
-
-**Delirium**
-
-**6\. Acute Confusional States: 5**
+| **Elemen/Path FHIR**                                 | **Terminologi/Format Pengisian**                                                                                         | **Keterangan**                                   |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
+| **Tingkat Kesadaran**                                |                                                                                                                          |                                                  |
+| `Observation.category[i].coding.system`              | [http://terminology.hl7.org/CodeSystem/observation-category](http://terminology.hl7.org/CodeSystem/observation-category) |                                                  |
+| `Observation.category[i].coding.code`                | exam                                                                                                                     |                                                  |
+| `Observation.category[i].coding.display`             | Exam                                                                                                                     |                                                  |
+| `*Observation.code.coding.system`                    | [http://loinc.org](http://loinc.org)                                                                                     |                                                  |
+| `*Observation.code.coding.code`                      | 67775-7                                                                                                                  |                                                  |
+| `*Observation.code.coding.display`                   | Level of responsiveness                                                                                                  |                                                  |
+| `Observation.valueCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct)                                                                         | 1. Sadar Baik/Alert: 0                           |
+| `Observation.valueCodeableConcept[i].coding.code`    | 248234008                                                                                                                |                                                  |
+| `Observation.valueCodeableConcept[i].coding.display` | Mentally alert                                                                                                           |                                                  |
+| `Observation.valueCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct)                                                                         | 2. Berespon dengan kata-kata/Voice: 1            |
+| `Observation.valueCodeableConcept[i].coding.code`    | 300202002                                                                                                                |                                                  |
+| `Observation.valueCodeableConcept[i].coding.display` | Response to voice                                                                                                        |                                                  |
+| `Observation.valueCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct)                                                                         | 3. Hanya berespons jika dirangsang nyeri/pain: 2 |
+| `Observation.valueCodeableConcept[i].coding.code`    | 450847001                                                                                                                |                                                  |
+| `Observation.valueCodeableConcept[i].coding.display` | Response to pain                                                                                                         |                                                  |
+| `Observation.valueCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct)                                                                         | 4. Pasien tidak sadar/unresponsive: 3            |
+| `Observation.valueCodeableConcept[i].coding.code`    | 422768004                                                                                                                |                                                  |
+| `Observation.valueCodeableConcept[i].coding.display` | Unresponsive                                                                                                             |                                                  |
+| `Observation.valueCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct)                                                                         | 5. Gelisah atau bingung: 4                       |
+| `Observation.valueCodeableConcept[i].coding.code`    | 130987000                                                                                                                |                                                  |
+| `Observation.valueCodeableConcept[i].coding.display` | Acute confusion                                                                                                          |                                                  |
+| `Observation.valueCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct)                                                                         | 6. Acute Confusional States: 5                   |
+| `Observation.valueCodeableConcept[i].coding.code`    | 2776000                                                                                                                  |                                                  |
+| `Observation.valueCodeableConcept[i].coding.display` | Delirium                                                                                                                 |                                                  |
 
 ## [](#_pengiriman_data_tindakanprosedur_medis)Pengiriman Data Tindakan/Prosedur Medis
 
@@ -754,6 +514,10 @@ Ketentuan pengisian secara spesifik untuk pengisian [_resource_ `MedicationReque
 
 Tabel 6. Hubungan antara MedicationRequest.dosageInstruction\[i\].timing.code dengan MedicationRequest.dosageInstruction\[i\].timing.repeat
 
+| **Description**                                             | **duration** | **durationUnit** | **frequency** | **frequencyMax** | **period** | **periodUnit** | **periodMax** | **when** | **bounds[x]** |
+| ----------------------------------------------------------- | ------------ | ---------------- | ------------- | ---------------- | ---------- | -------------- | ------------- | -------- | ------------- |
+| Content missing - please refer to documentation or examples |              |                  |               |                  |            |                |               |          |               |
+
 ## [](#_pengiriman_data_pengeluaran_obat)Pengiriman Data Pengeluaran Obat
 
 Pengiriman data pengeluaran/_dispense_ obat akan menggunakan 2 _resources_ yaitu `Medication` dan `MedicationDispense`. _resource_ [`Medication`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/medication/#medication) akan mencatatkan data umum terkait obat yang akan di _dispense_. Sedangkan [_resource_ `MedicationDispense`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/medication-dispense/#medicationdispense) akan digunakan untuk mengirimkan data terkait proses `dispense` obat, seperti jumlah yang di _dispense_, instruksi minum obat dan lain-lain. Kedua data ini dikirimkan secara bersamaan sebagai 1 paket yaitu `Medication` dan `MedicationDispense`. Satu _payload_ `Medication` dan `MedicationDispense` hanya digunakan untuk _dispense_/pengeluaran 1 jenis obat saja. Apabila terdapat 2 jenis obat yang dikeluarkan, maka dikirimkan 2 paket `Medication` dan `MedicationDispense`.
@@ -829,305 +593,47 @@ Ketentuan pengisian secara spesifik untuk pengisian [_resource_ `MedicationDispe
 
 Tabel 7. Tatacara pengisian MedicationDispense.dosageInstruction\[i\].timing.repeat
 
-description
-
-duration
-
-durationUnit
-
-frequency
-
-frequencyMax
-
-period
-
-periodUnit
-
-periodMax
-
-DayofWeek
-
-TimeOfDay
-
-when
-
-offset
-
-bounds\[x\]
-
-count
-
-**Every 8 hours**
-
-**1**
-
-**8**
-
-**h**
-
-**Every 7 days**
-
-**1**
-
-**7**
-
-**d**
-
-**3 times a day**
-
-**3**
-
-**1**
-
-**d**
-
-**3-4 times a day**
-
-**3**
-
-**4**
-
-**1**
-
-**d**
-
-**Every 4-6 hours**
-
-**1**
-
-**4**
-
-**h**
-
-**6**
-
-**Every 21 days for 1 hours**
-
-**1**
-
-**hr**
-
-**1**
-
-**21**
-
-**d**
-
-**Three times a week for 1/2 hour**
-
-**0.5**
-
-**hr**
-
-**3**
-
-**1**
-
-**wk**
-
-**With breakfast**
-
-**CM**
-
-**For 5 minutes, 10 minutes before meals**
-
-**5**
-
-**min**
-
-**AC**
-
-**10**
-
-**1 tablet 3 times daily, 30 minutes before meals**
-
-**3**
-
-**1**
-
-**d**
-
-**AC**
-
-**30**
-
-**BID, 30 mins before meal, for next 10 days**
-
-**2**
-
-**1**
-
-**d**
-
-**AC**
-
-**30**
-
-**Duration = 10 days**
-
-**TID, for 14 days**
-
-**3**
-
-**1**
-
-**d**
-
-**Duration = 14 days**
-
-**BID, start on 7/1/2015 at 1:00 PM**
-
-**2**
-
-**1**
-
-**d**
-
-**Period.start = 2015-07-01T13:00:00**
-
-**Mon, Wed, Fri, Morning**
-
-**1**
-
-**1**
-
-**d**
-
-**mon l wed l fri**
-
-**MORN**
-
-**Every day at 10am**
-
-**1**
-
-**1**
-
-**d**
-
-**10:00**
-
-**Take once, at any time**
-
-**1**
-
-**Take every second day, in the morning, until 20 have been taken**
-
-**1**
-
-**2**
-
-**d**
-
-**MORN**
-
-**20**
+| **Description**                                                     | **duration** | **durationUnit** | **frequency** | **frequencyMax** | **period** | **periodUnit** | **periodMax** | **DayofWeek**         | **TimeOfDay** | **when** | **offset** | **bounds[x]**                          | **count** |
+| ------------------------------------------------------------------- | ------------ | ---------------- | ------------- | ---------------- | ---------- | -------------- | ------------- | --------------------- | ------------- | -------- | ---------- | -------------------------------------- | --------- |
+| **Every 8 hours**                                                   |              |                  | **1**         |                  | **8**      | **h**          |               |                       |               |          |            |                                        |           |
+| **Every 7 days**                                                    |              |                  | **1**         |                  | **7**      | **d**          |               |                       |               |          |            |                                        |           |
+| **3 times a day**                                                   |              |                  | **3**         |                  | **1**      | **d**          |               |                       |               |          |            |                                        |           |
+| **3-4 times a day**                                                 |              |                  | **3**         | **4**            | **1**      | **d**          |               |                       |               |          |            |                                        |           |
+| **Every 4-6 hours**                                                 |              |                  | **1**         |                  | **4**      | **h**          | **6**         |                       |               |          |            |                                        |           |
+| **Every 21 days for 1 hours**                                       | **1**        | **hr**           | **1**         |                  | **21**     | **d**          |               |                       |               |          |            |                                        |           |
+| **Three times a week for 1/2 hour**                                 | **0.5**      | **hr**           | **3**         |                  | **1**      | **wk**         |               |                       |               |          |            |                                        |           |
+| **With breakfast**                                                  |              |                  |               |                  |            |                |               |                       |               | **CM**   |            |                                        |           |
+| **For 5 minutes, 10 minutes before meals**                          | **5**        | **min**          |               |                  |            |                |               |                       |               | **AC**   | **10**     |                                        |           |
+| **1 tablet 3 times daily, 30 minutes before meals**                 |              |                  | **3**         |                  | **1**      | **d**          |               |                       |               | **AC**   | **30**     |                                        |           |
+| **BID, 30 mins before meal, for next 10 days**                      |              |                  | **2**         |                  | **1**      | **d**          |               |                       |               | **AC**   | **30**     | **Duration = 10 days**                 |           |
+| **TID, for 14 days**                                                |              |                  | **3**         |                  | **1**      | **d**          |               |                       |               |          |            | **Duration = 14 days**                 |           |
+| **BID, start on 7/1/2015 at 1:00 PM**                               |              |                  | **2**         |                  | **1**      | **d**          |               |                       |               |          |            | **Period.start = 2015-07-01T13:00:00** |           |
+| **Mon, Wed, Fri, Morning**                                          |              |                  | **1**         |                  | **1**      | **d**          |               | **mon \| wed \| fri** | **MORN**      |          |            |                                        |           |
+| **Every day at 10am**                                               |              |                  | **1**         |                  | **1**      | **d**          |               |                       | **10:00**     |          |            |                                        |           |
+| **Take once, at any time**                                          |              |                  |               |                  |            |                |               |                       |               |          |            |                                        | **1**     |
+| **Take every second day, in the morning, until 20 have been taken** |              |                  | **1**         |                  | **2**      | **d**          |               |                       | **MORN**      |          |            |                                        | **20**    |
 
 1.  `MedicationDispense.dosageInstruction[i].timing.code` `MedicationDispense.dosageInstruction[i].timing.code` berisi kode untuk aturan kapan suatu obat harus dikonsumsi. Apabila mengirimkan data menggunakan `MedicationDispense.dosageInstruction[i].timing.code`, elemen `MedicationDispense.dosageInstruction[i].timing.repeat` harus tetap diisi yang ekuivalen. Hubungan antara `MedicationDispense.dosageInstruction[i].timing.code` dengan `MedicationDispense.dosageInstruction[i].timing.repeat` dapat dilihat dalam Gambar 7.
 
 Tabel 8. Hubungan antara MedicationRequest.dosageInstruction\[i\].timing.code dengan MedicationRequest.dosageInstruction\[i\].timing.repeat
 
-description
-
-duration
-
-durationUnit
-
-frequency
-
-frequencyMax
-
-period
-
-periodUnit
-
-periodMax
-
-when
-
-bounds\[x\]
-
-**QOD**
-
-**1**
-
-**2**
-
-**d**
-
-**QD**
-
-**1**
-
-**1**
-
-**d**
-
-**BID**
-
-**2**
-
-**1**
-
-**d**
-
-**TID**
-
-**3**
-
-**1**
-
-**d**
-
-**QID**
-
-**4**
-
-**1**
-
-**d**
-
-**Q4H**
-
-**1**
-
-**4**
-
-**h**
-
-**Q6H**
-
-**1**
-
-**6**
-
-**h**
-
-**AM**
-
-**1**
-
-**1**
-
-**d**
-
-**MORN**
-
-**PM**
-
-**1**
-
-**1**
-
-**d**
-
-**AFT or EVE**
+| **Description** | **duration** | **durationUnit** | **frequency** | **frequencyMax** | **period** | **periodUnit** | **periodMax** | **when**       | **bounds[x]** |
+| --------------- | ------------ | ---------------- | ------------- | ---------------- | ---------- | -------------- | ------------- | -------------- | ------------- |
+| **QOD**         |              |                  | **1**         |                  | **2**      | **d**          |               |                |               |
+| **QD**          |              |                  | **1**         |                  | **1**      | **d**          |               |                |               |
+| **BID**         |              |                  | **2**         |                  | **1**      | **d**          |               |                |               |
+| **TID**         |              |                  | **3**         |                  | **1**      | **d**          |               |                |               |
+| **QID**         |              |                  | **4**         |                  | **1**      | **d**          |               |                |               |
+| **Q4H**         |              |                  | **1**         |                  | **4**      | **h**          |               |                |               |
+| **Q6H**         |              |                  | **1**         |                  | **6**      | **h**          |               |                |               |
+| **AM**          |              |                  | **1**         |                  | **1**      | **d**          |               | **MORN**       |               |
+| **PM**          |              |                  | **1**         |                  | **1**      | **d**          |               | **AFT or EVE** |               |
 
 Penjelasan tipe mandatoris, deskripsi dan format pengisian dari setiap elemen data/_path_ di dalam _resource_ `Medication` dan `MedicationDispense` (data peresepan obat dan pengeluaran obat), dapat dilihat dalam _resource_ [`Medication`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/medication/#medication) dan [_resource_ `MedicationDispense`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/medication-dispense/#medicationdispense). Untuk contoh pengiriman data atau _payload_ dari `Medication` dan `MedicationDispense` dapat dilihat dalam Postman Collection.
 
 ## [](#_pengiriman_data_diagnosis)Pengiriman Data Diagnosis
 
-Data diagnosis pasien dapat dikirimkan menggunakan _resource_ [`Condition`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/condition/#condition). Informasi diagnosis yang dimiliki pasien dilaporkan menggunakan kode ICD-10. Satu _payload_ `Condition` hanya dapat digunakan untuk melaporkan 1 kode ICD-10. Sehingga apabila pasien memiliki 2 diagnosis, maka dikirimkan 2 _payload_ `Condition` dengan 2 kode ICD-10 yang berbeda.
+Data diagnosis pasien dapat dikirimkan menggunakan _resource_ [`Condition`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/condition). Informasi diagnosis yang dimiliki pasien dilaporkan menggunakan kode ICD-10. Satu _payload_ `Condition` hanya dapat digunakan untuk melaporkan 1 kode ICD-10. Sehingga apabila pasien memiliki 2 diagnosis, maka dikirimkan 2 _payload_ `Condition` dengan 2 kode ICD-10 yang berbeda.
 
 ### [](#_pemetaan_nilai_6)Pemetaan Nilai
 
@@ -1170,37 +676,15 @@ Terminologi spesifik yang digunakan dalam pengiriman data diagnosis melalui _res
 
 Tabel 9. Terminologi Spesifik
 
-Pemetaan Variabel Resource Condition
-
-**Elemen/Path FHIR**
-
-**Terminologi/Format Pengisian**
-
-**1\. Diagnosis**
-
-**`Condition.category.coding.system`**
-
-**[http://terminology.hl7.org/CodeSystem/condition-category](http://terminology.hl7.org/CodeSystem/condition-category)**
-
-**`Condition.category.coding.code`**
-
-**encounter-diagnosis**
-
-**`Condition.category.coding.display`**
-
-**Encounter Diagnosis**
-
-**`Condition.code.coding.system`**
-
-**[http://hl7.org/fhir/sid/icd-10](http://hl7.org/fhir/sid/icd-10)**
-
-**`Condition.code.coding.code`**
-
-**ICD-10 code**
-
-**`Condition.code.coding.display`**
-
-**ICD-10 Code Description**
+| **Elemen/Path FHIR**                | **Terminologi/Format Pengisian**                                                                                     |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **1. Diagnosis**                    |                                                                                                                      |
+| `Condition.category.coding.system`  | [http://terminology.hl7.org/CodeSystem/condition-category](http://terminology.hl7.org/CodeSystem/condition-category) |
+| `Condition.category.coding.code`    | encounter-diagnosis                                                                                                  |
+| `Condition.category.coding.display` | Encounter Diagnosis                                                                                                  |
+| `Condition.code.coding.system`      | [http://hl7.org/fhir/sid/icd-10](http://hl7.org/fhir/sid/icd-10)                                                     |
+| `Condition.code.coding.code`        | ICD-10 code                                                                                                          |
+| `Condition.code.coding.display`     | ICD-10 Code Description                                                                                              |
 
 ## [](#_pengiriman_data_diet)Pengiriman Data Diet
 
@@ -1244,37 +728,15 @@ Terminologi spesifik yang digunakan dalam pengiriman data diet melalui _resource
 
 Tabel 10. Terminologi Spesifik
 
-Resource Composition
-
-**Elemen/Path FHIR**
-
-**Terminologi/Format Pengisian**
-
-**Nama Variabel: Diet**
-
-**`*Composition.type[i].coding.system`**
-
-**[http://loinc.org/](http://loinc.org/)**
-
-**`*Composition.type[i].coding.code`**
-
-**18842-5**
-
-**`*Composition.type[i].coding.display`**
-
-**Discharge summary**
-
-**`Composition.section[i].code.coding.system`**
-
-**[http://loinc.org](http://loinc.org)**
-
-**`Composition.section[i].code.coding.code`**
-
-**42344-2**
-
-**`Composition.section[i].code.coding.display`**
-
-**Discharge diet (narrative)**
+| **Elemen/Path FHIR**                         | **Terminologi/Format Pengisian**       |
+| -------------------------------------------- | -------------------------------------- |
+| **Nama Variabel: Diet**                      |                                        |
+| `*Composition.type[i].coding.system`         | [http://loinc.org/](http://loinc.org/) |
+| `*Composition.type[i].coding.code`           | 18842-5                                |
+| `*Composition.type[i].coding.display`        | Discharge summary                      |
+| `Composition.section[i].code.coding.system`  | [http://loinc.org](http://loinc.org)   |
+| `Composition.section[i].code.coding.code`    | 42344-2                                |
+| `Composition.section[i].code.coding.display` | Discharge diet (narrative)             |
 
 ## [](#_pengiriman_data_prognosis)Pengiriman Data Prognosis
 
@@ -1316,49 +778,21 @@ Terminologi spesifik yang digunakan dalam pengiriman data prognosis melalui [_re
 
 Tabel 11. Terminologi spesifik yang digunakan dalam pengiriman data prognosis melalui resource ClinicalImpression
 
-Resource ClinicalImpression
-
-**Nama Variabel: Prognosis**
-
-**`*ClinicalImpression.prognosisCodeableConcept[i].coding.system`**
-
-**`*ClinicalImpression.prognosisCodeableConcept[i].coding.code`**
-
-**`*ClinicalImpression.prognosisCodeableConcept[i].coding.display`**
-
-**Keterangan**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**170968001**
-
-**Prognosis good**
-
-**1\. Baik;**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**65872000**
-
-**Fair prognosis**
-
-**2\. Dubia et bonam / cenderung baik;**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**67334001**
-
-**Guarded prognosis**
-
-**3\. Dubia et malam / cenderung tidak baik;**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**170969009**
-
-**Prognosis bad**
-
-**4\. Tidak baik**
+| **Elemen/Path FHIR**                                             | **Terminologi/Format Pengisian**                 | **Keterangan**                            |
+| ---------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------- |
+| **Nama Variabel: Prognosis**                                     |                                                  |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct) | 1. Baik;                                  |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.code`    | 170968001                                        |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.display` | Prognosis good                                   |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct) | 2. Dubia et bonam / cenderung baik;       |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.code`    | 65872000                                         |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.display` | Fair prognosis                                   |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct) | 3. Dubia et malam / cenderung tidak baik; |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.code`    | 67334001                                         |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.display` | Guarded prognosis                                |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.system`  | [http://snomed.info/sct](http://snomed.info/sct) | 4. Tidak baik                             |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.code`    | 170969009                                        |                                           |
+| `*ClinicalImpression.prognosisCodeableConcept[i].coding.display` | Prognosis bad                                    |                                           |
 
 ## [](#_pengiriman_data_kondisi_saat_meninggalkan_rumah_sakit)Pengiriman Data Kondisi Saat Meninggalkan Rumah Sakit
 
@@ -1366,63 +800,16 @@ Data kondisi saat meninggalkan rumah sakit menunjukkan keadaan pasien saat menin
 
 Tabel 12. Pilihan jawaban dari kondisi saat meninggalkan rumah sakit dan resource yang digunakan
 
-Variabel
-
-Format/Value
-
-Resource
-
-Elemen Data / Path
-
-**Kondisi Saat Meninggalkan Rumah Sakit**
-
-**1\. Stabil**
-
-**`Condition`**
-
-**`Condition.code.coding`**
-
-**2\. Tidak stabil**
-
-**`Condition`**
-
-**`Condition.code.coding`**
-
-**3\. Perbaikan**
-
-**`Condition`**
-
-**`Condition.code.coding`**
-
-**4\. Pulang paksa**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
-
-**5\. Dirujuk**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
-
-**6\. Meninggal<48 jam**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
-
-**7\. Meninggal>48 jam**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
-
-**8\. Lain-lain (free text)**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
+| **Variabel**                              | **Format/Value**         | **Resource** | **Elemen Data / Path**                                  |
+| ----------------------------------------- | ------------------------ | ------------ | ------------------------------------------------------- |
+| **Kondisi Saat Meninggalkan Rumah Sakit** | 1. Stabil                | `Condition`  | `Condition.code.coding`                                 |
+|                                           | 2. Tidak stabil          | `Condition`  | `Condition.code.coding`                                 |
+|                                           | 3. Perbaikan             | `Condition`  | `Condition.code.coding`                                 |
+|                                           | 4. Pulang paksa          | `Encounter`  | `Encounter.hospitalization.dischargeDisposition.coding` |
+|                                           | 5. Dirujuk               | `Encounter`  | `Encounter.hospitalization.dischargeDisposition.coding` |
+|                                           | 6. Meninggal<48 jam      | `Encounter`  | `Encounter.hospitalization.dischargeDisposition.coding` |
+|                                           | 7. Meninggal>48 jam      | `Encounter`  | `Encounter.hospitalization.dischargeDisposition.coding` |
+|                                           | 8. Lain-lain (free text) | `Encounter`  | `Encounter.hospitalization.dischargeDisposition.coding` |
 
 Kondisi saat meninggalkan rumah sakit dengan pilihan jawaban “Stabil”, “Tidak stabil”, dan “Perbaikan” akan dikirimkan menggunakan _resource_ [`Condition`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/condition/#condition).
 
@@ -1444,53 +831,19 @@ Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggal
 
 Tabel 13. Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggalkan rumah sakit melalui resource `Condition`
 
-Resource Condition
-
-**Elemen/Path FHIR**
-
-**Terminologi/Format Pengisian**
-
-**Nama Variabel: Kondisi Saat Meninggalkan Rumah Sakit**
-
-**`Condition.category.coding.system`**
-
-**[http://terminology.hl7.org/CodeSystem/condition-category](http://terminology.hl7.org/CodeSystem/condition-category)**
-
-**`Condition.category.coding.code`**
-
-**problem-list-item**
-
-**`Condition.category.coding.display`**
-
-**Problem List Item**
-
-**`Condition.code.coding.system`**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
-
-**`Condition.code.coding.code`**
-
-**359746009**
-
-**162668006**
-
-**268910001**
-
-**`Condition.code.coding.display`**
-
-**Patient’s condition stable**
-
-**Patient’s condition unstable**
-
-**Patient’s condition improved**
-
-**Keterangan**
-
-**Stabil**
-
-**Tidak stabil**
-
-**Perbaikan**
+| **Elemen/Path FHIR**                                     | **Terminologi/Format Pengisian**                                                                                     | **Keterangan** |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------- |
+| **Nama Variabel: Kondisi Saat Meninggalkan Rumah Sakit** |                                                                                                                      |                |
+| `Condition.category.coding.system`                       | [http://terminology.hl7.org/CodeSystem/condition-category](http://terminology.hl7.org/CodeSystem/condition-category) |                |
+| `Condition.category.coding.code`                         | problem-list-item                                                                                                    |                |
+| `Condition.category.coding.display`                      | Problem List Item                                                                                                    |                |
+| `Condition.code.coding.system`                           | [http://snomed.info/sct](http://snomed.info/sct)                                                                     |                |
+| `Condition.code.coding.code`                             | 359746009                                                                                                            | Stabil         |
+| `Condition.code.coding.display`                          | Patient's condition stable                                                                                           |                |
+| `Condition.code.coding.code`                             | 162668006                                                                                                            | Tidak stabil   |
+| `Condition.code.coding.display`                          | Patient's condition unstable                                                                                         |                |
+| `Condition.code.coding.code`                             | 268910001                                                                                                            | Perbaikan      |
+| `Condition.code.coding.display`                          | Patient's condition improved                                                                                         |                |
 
 Kondisi saat meninggalkan rumah sakit dengan pilihan jawaban “Pulang paksa”, “Dirujuk”, “Meninggal <48 jam”, “Meninggal > 48 jam”, dan “lain-lain” akan dikirimkan menggunakan _resource_ [`Encounter`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/encounter/#encounter) pada elemen `Encounter.hospitalization.dischargeDisposition.coding`. Sedangkan untuk pilihan jawaban lain-lain, keterangan tambahan dapat dikirimkan dengan tipe data `String` melalui elemen `Encounter.hospitalization.dischargeDisposition.text`.
 
@@ -1500,58 +853,26 @@ Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggal
 
 Tabel 14. Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggalkan rumah sakit melalui resource `Encounter`
 
-Resource Encounter
+Tabel 14. Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggalkan rumah sakit melalui resource `Encounter`
 
-**Nama Variabel: Kondisi Saat Meninggalkan Rumah Sakit**
-
-**`Encounter.hospitalization.dischargeDisposition.coding.system`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding.code`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding.display`**
-
-**Keterangan**
-
-**[http://terminology.hl7.org/CodeSystem/discharge-disposition](http://terminology.hl7.org/CodeSystem/discharge-disposition)**
-
-**aadvice**
-
-**Left against advice**
-
-**4\. Pulang paksa**
-
-**[http://terminology.hl7.org/CodeSystem/discharge-disposition](http://terminology.hl7.org/CodeSystem/discharge-disposition)**
-
-**other-hcf**
-
-**Other healthcare facility**
-
-**5\. Dirujuk**
-
-**[http://terminology.kemkes.go.id/CodeSystem/discharge-disposition](http://terminology.kemkes.go.id/CodeSystem/discharge-disposition)**
-
-**exp-lt48h**
-
-**Meninggal <48 jam**
-
-**6\. Meninggal <48 jam;**
-
-**[http://terminology.kemkes.go.id/CodeSystem/discharge-disposition](http://terminology.kemkes.go.id/CodeSystem/discharge-disposition)**
-
-**exp-gt48h**
-
-**Meninggal >48 jam**
-
-**7\. Meninggal >48 jam**
-
-**[http://terminology.hl7.org/CodeSystem/discharge-disposition](http://terminology.hl7.org/CodeSystem/discharge-disposition)**
-
-**oth**
-
-**Other**
-
-**8\. Lain-  
-lain (free text)**
+| **Elemen/Path FHIR** | **Terminologi/Format Pengisian** | **Keterangan** |
+|---|---|---|
+| **Nama Variabel: Kondisi Saat Meninggalkan Rumah Sakit** | | |
+| `Encounter.hospitalization.dischargeDisposition.coding.system` | [http://terminology.hl7.org/CodeSystem/discharge-disposition](http://terminology.hl7.org/CodeSystem/discharge-disposition) | 4. Pulang paksa |
+| `Encounter.hospitalization.dischargeDisposition.coding.code` | aadvice | |
+| `Encounter.hospitalization.dischargeDisposition.coding.display` | Left against advice | |
+| `Encounter.hospitalization.dischargeDisposition.coding.system` | [http://terminology.hl7.org/CodeSystem/discharge-disposition](http://terminology.hl7.org/CodeSystem/discharge-disposition) | 5. Dirujuk |
+| `Encounter.hospitalization.dischargeDisposition.coding.code` | other-hcf | |
+| `Encounter.hospitalization.dischargeDisposition.coding.display` | Other healthcare facility | |
+| `Encounter.hospitalization.dischargeDisposition.coding.system` | [http://terminology.kemkes.go.id/CodeSystem/discharge-disposition](http://terminology.kemkes.go.id/CodeSystem/discharge-disposition) | 6. Meninggal <48 jam; |
+| `Encounter.hospitalization.dischargeDisposition.coding.code` | exp-lt48h | |
+| `Encounter.hospitalization.dischargeDisposition.coding.display` | Meninggal <48 jam | |
+| `Encounter.hospitalization.dischargeDisposition.coding.system` | [http://terminology.kemkes.go.id/CodeSystem/discharge-disposition](http://terminology.kemkes.go.id/CodeSystem/discharge-disposition) | 7. Meninggal >48 jam |
+| `Encounter.hospitalization.dischargeDisposition.coding.code` | exp-gt48h | |
+| `Encounter.hospitalization.dischargeDisposition.coding.display` | Meninggal >48 jam | |
+| `Encounter.hospitalization.dischargeDisposition.coding.system` | [http://terminology.hl7.org/CodeSystem/discharge-disposition](http://terminology.hl7.org/CodeSystem/discharge-disposition) | 8. Lain-lain (free text) |
+| `Encounter.hospitalization.dischargeDisposition.coding.code` | oth | |
+| `Encounter.hospitalization.dischargeDisposition.coding.display` | Other | |
 
 ## [](#_pengiriman_data_rencana_tindak_lanjut_cara_keluar_dari_rumah_sakit_sarana_transportasi_untuk_rujuk)Pengiriman Data Rencana Tindak Lanjut / Cara Keluar dari Rumah Sakit & Sarana Transportasi Untuk Rujuk
 
@@ -1618,9 +939,9 @@ Penjelasan tipe mandatoris, deskripsi dan format pengisian dari setiap elemen da
 
 #### [](#_pemetaan_variabel_dan_terminologi_spesifik_6)Pemetaan Variabel dan Terminologi Spesifik
 
-Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggalkan rumah sakit dengan pilihan jawaban “Dirujuk”, “Meninggal <48 jam”, “Meninggal > 48 jam” melalui _resource_ [`Encounter`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/encounter/#encounter) dapat dilihat dalam tabel berikut.
+Terminologi spesifik yang digunakan dalam pengiriman data rencana tindak lanjut/cara keluar dari rumah sakit dengan pilihan jawaban “Dirujuk”, “Meninggal <48 jam”, “Meninggal > 48 jam” melalui _resource_ [`Encounter`](https://SehatMu.kemkes.go.id/platform/docs/id/interoperability/fhir/resources/encounter/#encounter) dapat dilihat dalam tabel berikut.
 
-Tabel 16. Terminologi spesifik yang digunakan dalam pengiriman data kondisi saat meninggalkan rumah sakit melalui resource `Encounter`
+Tabel 16. Terminologi spesifik yang digunakan dalam pengiriman data rencana tindak lanjut/cara keluar dari rumah sakit melalui resource `Encounter`
 
 Resource Encounter
 
@@ -1675,8 +996,6 @@ Resource ServiceRequest
 **Nama Variabel: Rencana tindak lanjut/cara keluar dari rumah sakit**
 
 **`ServiceRequest.code.coding.system`**
-
-**[http://snomed.info/sct](http://snomed.info/sct)**
 
 **[http://snomed.info/sct](http://snomed.info/sct)**
 

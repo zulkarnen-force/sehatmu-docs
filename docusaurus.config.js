@@ -8,10 +8,10 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "SehatMu",
   tagline: "SehatMu, untuk kesehatan Muhammadiyah",
-  url: "https://sehat.muhammadiyah.or.id",
-  baseUrl: "/guide",
-  // url: "https://jerusalem-dev.muhammadiyah.or.id",
-  // baseUrl: "/",
+  // url: "https://sehat.muhammadiyah.or.id",
+  // baseUrl: "/guide",
+  url: "https://jerusalem-dev.muhammadiyah.or.id",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -59,7 +59,7 @@ const config = {
         logo: {
           alt: "SehatMu Logo",
           src: "img/logo.png",
-          href: "https://sehat.muhammadiyah.or.id",
+          href: "https://jerusalem-dev.muhammadiyah.or.id/",
         },
         items: [
           {
