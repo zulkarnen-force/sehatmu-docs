@@ -880,43 +880,13 @@ Data rencana tindak lanjut/cara keluar dari rumah sakit menunjukkan rencana pera
 
 Tabel 15. Pilihan jawaban dari rencana tindak lanjut/cara keluar dari rumah sakit dan resource yang digunakan
 
-Variabel
-
-Format/Value
-
-Resource
-
-Elemen Data / Path
-
-**Rencana Tindak Lanjut / Cara Keluar dari Rumah Sakit**
-
-**1\. Pulang atas persetujuan dokter**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
-
-**2\. Pulang atas permintaan sendiri**
-
-**`Encounter`**
-
-**`Encounter.hospitalization.dischargeDisposition.coding`**
-
-**3\. Dirujuk ke (free text)**
-
-**`ServiceRequest`**
-
-**`ServiceRequest.code.coding`**
-
-**4\. Rawat inap**
-
-**`ServiceRequest`**
-
-**`ServiceRequest.code.coding`**
-
-**5\. Lain-lain (free text)**
-
-**`Encounter`**
+| **Variabel** | **Format/Value** | **Resource** | **Elemen Data / Path** |
+|---|---|---|---|
+| **Rencana Tindak Lanjut / Cara Keluar dari Rumah Sakit** | 1. Pulang atas persetujuan dokter | `Encounter` | `Encounter.hospitalization.dischargeDisposition.coding` |
+| | 2. Pulang atas permintaan sendiri | `Encounter` | `Encounter.hospitalization.dischargeDisposition.coding` |
+| | 3. Dirujuk ke (free text) | `ServiceRequest` | `ServiceRequest.code.coding` |
+| | 4. Rawat inap | `ServiceRequest` | `ServiceRequest.code.coding` |
+| | 5. Lain-lain (free text) | `Encounter` | `Encounter.hospitalization.dischargeDisposition.coding` |
 
 **`Encounter.hospitalization.dischargeDisposition.text`**
 
